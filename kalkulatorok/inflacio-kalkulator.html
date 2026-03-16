@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Infláció kalkulátor</title>
+
+    <meta
+      name="description"
+      content="Számold ki mennyit ér a pénzed infláció mellett."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <a href="../mainindex.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Infláció kalkulátor</h1>
+
+        <p>Számold ki mennyit ér a pénzed az infláció hatására.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Összeg (Ft)</label>
+            <input type="number" id="money" value="0" />
+          </div>
+
+          <div>
+            <label>Infláció (%)</label>
+            <input type="number" id="inflation" value="0" />
+          </div>
+
+          <div>
+            <label>Évek</label>
+            <input type="number" id="years" value="0" />
+          </div>
+        </div>
+
+        <button onclick="calculateInflation()">Számol</button>
+
+        <div class="result-box">
+          <p>Eredmény:</p>
+
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Mi az infláció?</h2>
+
+        <p>
+          Az infláció az árak általános emelkedését jelenti, amely csökkenti a
+          pénz vásárlóerejét.
+        </p>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

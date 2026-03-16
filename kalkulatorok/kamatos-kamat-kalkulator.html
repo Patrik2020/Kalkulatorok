@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kamatos kamat kalkulátor</title>
+
+    <meta
+      name="description"
+      content="Számold ki mennyit ér a befektetésed kamatos kamattal."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <a href="../mainindex.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Kamatos kamat kalkulátor</h1>
+
+        <p>Számold ki mennyit ér a befektetésed kamatos kamattal.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Kezdőtőke (Ft)</label>
+            <input type="number" id="principal" />
+          </div>
+
+          <div>
+            <label>Kamat (%)</label>
+            <input type="number" id="rate" value="5" />
+          </div>
+
+          <div>
+            <label>Évek</label>
+            <input type="number" id="years" />
+          </div>
+        </div>
+
+        <button onclick="calculateCompoundInterest()">Számol</button>
+
+        <div class="result-box">
+          <p>Eredmény</p>
+
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Mi az a kamatos kamat?</h2>
+
+        <p>
+          A kamatos kamat azt jelenti, hogy a befektetésed nemcsak az eredeti
+          tőkére, hanem a már megszerzett kamatra is kamatozik. Ez az egyik
+          legfontosabb elv a hosszú távú befektetésnél.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
