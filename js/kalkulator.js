@@ -67,3 +67,67 @@ function calculateTiles() {
 
   document.getElementById("result-value").innerText = Math.ceil(total) + " db";
 }
+// BMI
+function calculateBMI() {
+  let weight = Number(document.getElementById("weight").value);
+  let height = Number(document.getElementById("height").value) / 100;
+
+  let bmi = weight / (height * height);
+
+  document.getElementById("result-value").innerText = bmi.toFixed(1);
+}
+
+// Kalória
+function calculateCalories() {
+  let weight = Number(document.getElementById("weightCal").value);
+  let height = Number(document.getElementById("heightCal").value);
+  let age = Number(document.getElementById("age").value);
+
+  let bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+
+  document.getElementById("result-value").innerText = Math.round(bmr) + " kcal";
+}
+
+// Százalék
+function calculatePercentage() {
+  let number = Number(document.getElementById("number").value);
+  let percent = Number(document.getElementById("percent").value);
+
+  let result = number * (percent / 100);
+
+  document.getElementById("result-value").innerText = result;
+}
+
+// ÁFA
+function calculateVAT() {
+  let amount = Number(document.getElementById("amount").value);
+  let vat = Number(document.getElementById("vat").value);
+
+  let result = amount * (1 + vat / 100);
+
+  document.getElementById("result-value").innerText =
+    Math.round(result) + " Ft";
+}
+
+// Üzemanyag
+function calculateFuel() {
+  let distance = Number(document.getElementById("distance").value);
+  let consumption = Number(document.getElementById("consumption").value);
+
+  let fuel = distance * (consumption / 100);
+
+  document.getElementById("result-value").innerText =
+    fuel.toFixed(2) + " liter";
+}
+
+// Utazás
+function calculateTrip() {
+  let distance = Number(document.getElementById("tripDistance").value);
+  let consumption = Number(document.getElementById("tripConsumption").value);
+  let price = Number(document.getElementById("fuelPrice").value);
+
+  let fuel = distance * (consumption / 100);
+  let cost = fuel * price;
+
+  document.getElementById("result-value").innerText = Math.round(cost) + " Ft";
+}

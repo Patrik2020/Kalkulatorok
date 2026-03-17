@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Utazási költség kalkulátor</title>
+
+    <meta name="description" content="Számold ki egy utazás költségét." />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Utazási költség kalkulátor</h1>
+        <p>Autós utazás költségének számítása.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Távolság (km)</label>
+            <input type="number" id="tripDistance" />
+          </div>
+
+          <div>
+            <label>Fogyasztás (l/100km)</label>
+            <input type="number" id="tripConsumption" />
+          </div>
+
+          <div>
+            <label>Üzemanyag ár (Ft/l)</label>
+            <input type="number" id="fuelPrice" />
+          </div>
+        </div>
+
+        <button onclick="calculateTrip()">Számol</button>
+
+        <div class="result-box">
+          <p>Eredmény:</p>
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Utazási költség</h2>
+        <p>
+          A költség a megtett távolság, fogyasztás és üzemanyag ár alapján
+          számolható.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

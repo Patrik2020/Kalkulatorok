@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ÁFA kalkulátor</title>
+
+    <meta name="description" content="ÁFA számítás gyorsan és egyszerűen." />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>ÁFA kalkulátor</h1>
+        <p>ÁFA hozzáadása egyszerűen.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Összeg (Ft)</label>
+            <input type="number" id="amount" />
+          </div>
+
+          <div>
+            <label>ÁFA (%)</label>
+            <input type="number" id="vat" value="27" />
+          </div>
+        </div>
+
+        <button onclick="calculateVAT()">Számol</button>
+
+        <div class="result-box">
+          <p>Eredmény:</p>
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Mi az ÁFA?</h2>
+        <p>
+          Az ÁFA egy fogyasztási adó, amelyet a termékek és szolgáltatások
+          árához adnak hozzá.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

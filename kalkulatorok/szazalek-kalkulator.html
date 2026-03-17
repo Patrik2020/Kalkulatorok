@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Százalék kalkulátor</title>
+
+    <meta name="description" content="Számolj százalékokat egyszerűen." />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Százalék kalkulátor</h1>
+        <p>Gyors százalék számítás.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Szám</label>
+            <input type="number" id="number" />
+          </div>
+
+          <div>
+            <label>Százalék (%)</label>
+            <input type="number" id="percent" />
+          </div>
+        </div>
+
+        <button onclick="calculatePercentage()">Számol</button>
+
+        <div class="result-box">
+          <p>Eredmény:</p>
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Százalék számítás</h2>
+        <p>A százalék egy arány, amely megmutatja egy szám részét.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
