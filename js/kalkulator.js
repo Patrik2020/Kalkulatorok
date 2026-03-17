@@ -31,3 +31,7 @@ window.onload = function () {
     document.getElementById("cookie-banner").style.display = "none";
   }
 };
+
+function goBack() {
+  window.history.back();
+}
