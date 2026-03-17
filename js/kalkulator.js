@@ -33,5 +33,9 @@ window.onload = function () {
 };
 
 function goBack() {
-  window.history.back();
+  if (document.referrer && document.referrer.includes(window.location.host)) {
+    window.history.back();
+  } else {
+    window.location.href = "../index.html";
+  }
 }
