@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Csempe kalkulátor</title>
+
+    <meta
+      name="description"
+      content="Számold ki mennyi csempe szükséges burkoláshoz."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Csempe kalkulátor</h1>
+
+        <p>Számold ki mennyi csempe szükséges.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Helyiség hossz (m)</label>
+            <input type="number" id="roomLength" />
+          </div>
+
+          <div>
+            <label>Helyiség szélesség (m)</label>
+            <input type="number" id="roomWidth" />
+          </div>
+
+          <div>
+            <label>Csempe hossz (cm)</label>
+            <input type="number" id="tileLength" />
+          </div>
+
+          <div>
+            <label>Csempe szélesség (cm)</label>
+            <input type="number" id="tileWidth" />
+          </div>
+
+          <div>
+            <label>Ráhagyás (%)</label>
+            <input type="number" id="waste" value="10" />
+          </div>
+        </div>
+
+        <button onclick="calculateTiles()">Számol</button>
+
+        <div class="result-box">
+          <p>Szükséges csempe (db):</p>
+
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Hogyan számoljuk a csempe mennyiséget?</h2>
+
+        <p>
+          A szükséges csempe mennyiség a burkolandó felület és a csempe mérete
+          alapján számolható ki. Érdemes 5-10% tartalékkal számolni.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

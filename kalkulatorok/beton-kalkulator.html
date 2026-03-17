@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Beton kalkulátor</title>
+
+    <meta
+      name="description"
+      content="Számold ki mennyi beton szükséges az építkezéshez."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Beton kalkulátor</h1>
+
+        <p>Számold ki mennyi beton szükséges.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Hossz (méter)</label>
+            <input type="number" id="length" />
+          </div>
+
+          <div>
+            <label>Szélesség (méter)</label>
+            <input type="number" id="width" />
+          </div>
+
+          <div>
+            <label>Vastagság (cm)</label>
+            <input type="number" id="height" />
+          </div>
+        </div>
+
+        <button onclick="calculateConcrete()">Számol</button>
+
+        <div class="result-box">
+          <p>Szükséges beton:</p>
+
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Hogyan számoljuk a beton mennyiséget?</h2>
+
+        <p>
+          A beton mennyiségét térfogat alapján számoljuk: hossz × szélesség ×
+          magasság. A vastagságot cm-ről méterre kell átváltani.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
