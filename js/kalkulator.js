@@ -21,3 +21,13 @@ function calculateCompoundInterest() {
   document.getElementById("result-value").innerText =
     Math.round(result).toLocaleString("hu-HU") + " Ft";
 }
+function acceptCookies() {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+window.onload = function () {
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+};
