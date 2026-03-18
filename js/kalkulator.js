@@ -131,3 +131,42 @@ function calculateTrip() {
 
   document.getElementById("result-value").innerText = Math.round(cost) + " Ft";
 }
+// alap százalék
+function calculatePercentage() {
+  let number = Number(document.getElementById("number").value);
+  let percent = Number(document.getElementById("percent").value);
+
+  let result = number * (percent / 100);
+
+  document.getElementById("result1").innerText = result;
+}
+
+// növekedés
+function calculateIncrease() {
+  let oldVal = Number(document.getElementById("oldValue").value);
+  let newVal = Number(document.getElementById("newValue").value);
+
+  if (oldVal === 0) {
+    document.getElementById("result2").innerText = "Hiba";
+    return;
+  }
+
+  let result = ((newVal - oldVal) / oldVal) * 100;
+
+  document.getElementById("result2").innerText = result.toFixed(2) + " %";
+}
+
+// csökkenés
+function calculateDecrease() {
+  let oldVal = Number(document.getElementById("oldValue2").value);
+  let newVal = Number(document.getElementById("newValue2").value);
+
+  if (oldVal === 0) {
+    document.getElementById("result3").innerText = "Hiba";
+    return;
+  }
+
+  let result = ((oldVal - newVal) / oldVal) * 100;
+
+  document.getElementById("result3").innerText = result.toFixed(2) + " %";
+}
