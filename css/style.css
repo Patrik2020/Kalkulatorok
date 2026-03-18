@@ -55,15 +55,30 @@ nav a:hover {
   margin: auto;
   padding: 40px 20px;
 }
-/* CARD */
+/* KÁRTYA FIX */
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* fontos */
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
-  max-width: 600px;
-  margin: auto;
-  transition: 0.25s;
+  min-height: 220px;
+}
+/* GOMB ALUL */
+.card a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 10px 16px;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
 }
 .card:hover {
   transform: translateY(-6px);
@@ -72,7 +87,7 @@ nav a:hover {
 /* ICON */
 .icon {
   font-size: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 /* CARD BUTTON LINK */
 .card a {
@@ -228,4 +243,40 @@ footer {
 }
 .back-btn:hover {
   text-decoration: underline;
+}
+/* hamburger gomb */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* mobil */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: #456cd8;
+  }
 }

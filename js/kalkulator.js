@@ -170,3 +170,6 @@ function calculateDecrease() {
 
   document.getElementById("result3").innerText = result.toFixed(2) + " %";
 }
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
