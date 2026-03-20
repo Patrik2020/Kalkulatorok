@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Számla teljesítés kalkulátor – teljesítési dátum, ÁFA szabályok
+    </title>
+
+    <meta
+      name="description"
+      content="Számold ki folyamatos teljesítésű számlák teljesítési dátumát. ÁFA szabályok alapján."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Számla teljesítés kalkulátor</h1>
+        <p>Számold ki a számla teljesítési dátumát egyszerűen.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Teljesítési időszak vége</label>
+            <input type="date" id="periodEnd" />
+          </div>
+
+          <div>
+            <label>Számla kiállítás dátuma</label>
+            <input type="date" id="invoiceDate" />
+          </div>
+
+          <div>
+            <label>Fizetési határidő</label>
+            <input type="date" id="paymentDate" />
+          </div>
+        </div>
+
+        <button onclick="calculateContinuous()">Számol</button>
+
+        <div class="result-box">
+          <p>Teljesítési dátum:</p>
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <!-- SEO -->
+      <section class="article">
+        <h2>Mi az a számla teljesítési dátum?</h2>
+
+        <p>
+          A számla teljesítési dátuma az az időpont, amikor a termék átadása
+          vagy a szolgáltatás teljesítése megtörtént. Folyamatos teljesítés
+          esetén speciális szabályok érvényesek, amelyeket ez a kalkulátor is
+          figyelembe vesz.
+        </p>
+
+        <h2>Hogyan számoljuk a teljesítési dátumot?</h2>
+
+        <ul>
+          <li>Alapeset: a fizetési határidő napja</li>
+          <li>Ha a fizetési határidő túl késői → max +60 nap</li>
+        </ul>
+      </section>
+
+      <!-- GYIK -->
+      <section class="article">
+        <h2>Gyakran ismételt kérdések</h2>
+
+        <h3>Mi számít folyamatos teljesítésnek?</h3>
+        <p>Olyan szolgáltatás, amely időszakon keresztül történik.</p>
+
+        <h3>Miért fontos a teljesítési dátum?</h3>
+        <p>Az ÁFA fizetés időpontját határozza meg.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fizetési határidő kalkulátor – számla határidő számítás</title>
+
+    <meta
+      name="description"
+      content="Számold ki a fizetési határidőt egyszerűen. Add meg a számla dátumát és a napok számát."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">🧮 KalkulátorHub</div>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Fizetési határidő kalkulátor</h1>
+        <p>Számold ki mikor jár le a számla fizetési határideje.</p>
+      </section>
+
+      <section class="card">
+        <div class="calc-grid">
+          <div>
+            <label>Számla dátuma</label>
+            <input type="date" id="invoiceDate" />
+          </div>
+
+          <div>
+            <label>Fizetési határidő (nap)</label>
+            <input type="number" id="days" value="8" />
+          </div>
+        </div>
+
+        <button onclick="calculateDeadline()">Számol</button>
+
+        <div class="result-box">
+          <p>Fizetési határidő:</p>
+          <p id="result-value">–</p>
+        </div>
+      </section>
+
+      <section class="article">
+        <h2>Mi az a fizetési határidő?</h2>
+
+        <p>
+          A fizetési határidő az a dátum, ameddig a számlát ki kell fizetni.
+        </p>
+
+        <h2>Hogyan számoljuk?</h2>
+
+        <p>A számla dátumához hozzáadjuk a megadott napok számát.</p>
+
+        <h2>Példa</h2>
+
+        <p>
+          Ha a számla dátuma március 1., és a határidő 8 nap, akkor a fizetési
+          határidő március 9.
+        </p>
+      </section>
+
+      <section class="article">
+        <h2>Gyakori kérdések</h2>
+
+        <h3>Bele számít a kiállítás napja?</h3>
+        <p>Igen, általában a kiállítás napjától számítjuk.</p>
+
+        <h3>Mi történik késedelem esetén?</h3>
+        <p>Késedelmi kamat számítható fel.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 KalkulátorHub</p>
+    </footer>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

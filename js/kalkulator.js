@@ -173,3 +173,70 @@ function calculateDecrease() {
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("active");
 }
+function calculateDeadline() {
+  let date = document.getElementById("invoiceDate").value;
+  let days = Number(document.getElementById("days").value);
+
+  if (!date) {
+    document.getElementById("result-value").innerText = "Adj meg dátumot";
+    return;
+  }
+
+  let d = new Date(date);
+  d.setDate(d.getDate() + days);
+
+  document.getElementById("result-value").innerText =
+    d.toLocaleDateString("hu-HU");
+}
+function calculatePerformance() {
+  let invoiceDate = document.getElementById("invoiceDate").value;
+  let deadline = Number(document.getElementById("deadline").value);
+  let performanceDate = document.getElementById("performanceDate").value;
+
+  // ha meg van adva a teljesítés → az a nyerő
+  if (performanceDate) {
+    document.getElementById("result-value").innerText = new Date(
+      performanceDate,
+    ).toLocaleDateString("hu-HU");
+    return;
+  }
+
+  // ha nincs, számolunk
+  if (!invoiceDate) {
+    document.getElementById("result-value").innerText = "Adj meg dátumot";
+    return;
+  }
+
+  let d = new Date(invoiceDate);
+  d.setDate(d.getDate() + deadline);
+
+  document.getElementById("result-value").innerText =
+    d.toLocaleDateString("hu-HU");
+}
+function calculateContinuous() {
+  let periodEnd = document.getElementById("periodEnd").value;
+  let invoiceDate = document.getElementById("invoiceDate").value;
+  let paymentDate = document.getElementById("paymentDate").value;
+
+  if (!periodEnd || !invoiceDate || !paymentDate) {
+    document.getElementById("result-value").innerText = "Tölts ki minden mezőt";
+    return;
+  }
+
+  let period = new Date(periodEnd);
+  let payment = new Date(paymentDate);
+
+  // alap: fizetési határidő
+  let result = new Date(payment);
+
+  // max 60 nap szabály
+  let maxDate = new Date(period);
+  maxDate.setDate(maxDate.getDate() + 60);
+
+  if (payment > maxDate) {
+    result = maxDate;
+  }
+
+  document.getElementById("result-value").innerText =
+    result.toLocaleDateString("hu-HU");
+}

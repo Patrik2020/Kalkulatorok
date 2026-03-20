@@ -280,3 +280,7 @@ footer {
     background: #456cd8;
   }
 }
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
