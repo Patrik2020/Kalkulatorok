@@ -244,14 +244,13 @@ function calculateConsumption() {
   const distance = parseFloat(document.getElementById("distance").value);
   const fuel = parseFloat(document.getElementById("fuel").value);
 
-  if (distance <= 0 || fuel <= 0) {
-    document.getElementById("consumption-result").innerText =
-      "Adj meg érvényes adatokat!";
+  if (!distance || !fuel) {
+    document.getElementById("result-value").innerText = "Adj meg adatokat!";
     return;
   }
 
   const consumption = (fuel / distance) * 100;
 
-  document.getElementById("consumption-result").innerText =
+  document.getElementById("result-value").innerText =
     consumption.toFixed(2) + " L/100km";
 }

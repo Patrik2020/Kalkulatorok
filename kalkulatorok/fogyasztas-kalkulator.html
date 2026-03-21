@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Autó fogyasztás kalkulátor (l/100km)</title>
+
+    <meta
+      name="description"
+      content="Számold ki autód fogyasztását egyszerűen. Liter/100 km kalkulátor gyorsan és pontosan."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Autó fogyasztás kalkulátor</h1>
+        <p>Számold ki mennyi az autód átlagfogyasztása.</p>
+      </section>
+
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Megtett távolság (km)</label>
+              <input type="number" id="distance" />
+            </div>
+
+            <div>
+              <label>Felhasznált üzemanyag (liter)</label>
+              <input type="number" id="fuel" />
+            </div>
+          </div>
+
+          <button onclick="calculateConsumption()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény:</p>
+            <p id="result-value">–</p>
+          </div>
+        </section>
+      </div>
+
+      <section class="article">
+        <h2>Mi az autó fogyasztás?</h2>
+        <p>
+          Az autó fogyasztás azt mutatja meg, hogy egy jármű 100 kilométeren
+          mennyi üzemanyagot használ fel. Ez az egyik legfontosabb mutató az
+          autó fenntartási költségeinek kiszámításához.
+        </p>
+
+        <h2>Hogyan működik a kalkulátor?</h2>
+        <p>
+          A kalkulátor a megtett távolság és a felhasznált üzemanyag alapján
+          számolja ki az átlagfogyasztást.
+        </p>
+
+        <h2>Példa</h2>
+        <p>
+          Ha 500 km-t tettél meg és 34 liter üzemanyagot használtál, akkor az
+          autó fogyasztása kb. 6.8 L/100km.
+        </p>
+
+        <h2>Mitől függ a fogyasztás?</h2>
+        <ul>
+          <li>Vezetési stílus</li>
+          <li>Városi vagy országúti használat</li>
+          <li>Autó típusa</li>
+          <li>Időjárás</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
