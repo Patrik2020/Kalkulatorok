@@ -27,7 +27,7 @@
 
   <body>
     <header>
-      <div class="logo">🧮 KalkulátorHub</div>
+      <a href="../index.html" class="logo">🧮 KalkulátorHub</a>
 
       <nav>
         <button onclick="goBack()" class="back-btn">← Vissza</button>
@@ -63,24 +63,93 @@
       </section>
 
       <section class="article">
-        <h2>Mi az ÁFA?</h2>
-
+        <div
+          class="article"
+          style="
+            background: #fff7ed;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #fed7aa;
+          "
+        >
+          <strong>Fontos:</strong> Ez az ÁFA kalkulátor kizárólag a
+          Magyarországon érvényes szabályok alapján számol. Más országokban
+          eltérő ÁFA kulcsok lehetnek.
+        </div>
+        <h2>Mi az az ÁFA?</h2>
         <p>
-          Az ÁFA (általános forgalmi adó) egy fogyasztási adó, amelyet a
-          termékek és szolgáltatások árához adnak hozzá.
+          Az ÁFA (általános forgalmi adó) egy olyan adónem, amelyet a termékek
+          és szolgáltatások értékesítése során kell megfizetni. Magyarországon
+          az általános ÁFA kulcs 27%, de léteznek kedvezményes kulcsok is,
+          például 18% és 5%.
         </p>
 
-        <h2>Magyarországon</h2>
+        <h2>Hogyan működik az ÁFA kalkulátor?</h2>
+        <p>
+          Az ÁFA kalkulátor segítségével könnyedén kiszámolhatod egy nettó
+          összeg bruttó értékét, illetve visszaszámolhatod a nettó összeget egy
+          bruttó árból.
+        </p>
 
+        <h2>Nettó és bruttó közötti különbség</h2>
         <ul>
-          <li><strong>27%:</strong> általános ÁFA</li>
-          <li><strong>18%:</strong> egyes élelmiszerek</li>
-          <li><strong>5%:</strong> speciális termékek</li>
+          <li><strong>Nettó ár:</strong> az adó nélküli ár</li>
+          <li><strong>ÁFA:</strong> a hozzáadott adó értéke</li>
+          <li><strong>Bruttó ár:</strong> a nettó ár + ÁFA összege</li>
         </ul>
 
-        <h2>Számítás</h2>
+        <h2>ÁFA számítás képletek</h2>
 
-        <p><strong>bruttó = nettó × (1 + ÁFA)</strong></p>
+        <p><strong>Bruttó = Nettó × (1 + ÁFA%)</strong></p>
+        <p><strong>Nettó = Bruttó / (1 + ÁFA%)</strong></p>
+
+        <p>
+          Például: egy 10 000 Ft nettó ár 27% ÁFA-val számolva 12 700 Ft bruttó
+          értéket jelent.
+        </p>
+
+        <h2>Magyarországi ÁFA kulcsok</h2>
+        <ul>
+          <li>27% – általános ÁFA kulcs</li>
+          <li>18% – például egyes élelmiszerek</li>
+          <li>5% – például könyvek, lakásértékesítés bizonyos esetekben</li>
+        </ul>
+
+        <h2>Mire használható az ÁFA kalkulátor?</h2>
+        <ul>
+          <li>Számlák készítésekor</li>
+          <li>Árak ellenőrzésekor</li>
+          <li>Költségtervezésnél</li>
+          <li>Vállalkozói pénzügyeknél</li>
+        </ul>
+      </section>
+
+      <section class="article">
+        <h2>Gyakran ismételt kérdések</h2>
+
+        <h3>Hogyan számolom ki a nettó árat bruttóból?</h3>
+        <p>
+          A bruttó összeget el kell osztani (1 + ÁFA kulcs) értékével. Például
+          27% ÁFA esetén 1,27-tel.
+        </p>
+
+        <h3>Mi a különbség a nettó és bruttó között?</h3>
+        <p>
+          A nettó ár az adó nélküli összeg, míg a bruttó ár már tartalmazza az
+          ÁFÁ-t.
+        </p>
+
+        <h3>Mikor kell ÁFÁ-t fizetni?</h3>
+        <p>
+          ÁFA fizetési kötelezettség általában termék vagy szolgáltatás
+          értékesítésekor keletkezik.
+        </p>
+
+        <h3>Melyik ÁFA kulcsot kell használni?</h3>
+        <p>
+          Ez a termék vagy szolgáltatás típusától függ, Magyarországon a
+          leggyakoribb a 27%.
+        </p>
       </section>
     </main>
 
