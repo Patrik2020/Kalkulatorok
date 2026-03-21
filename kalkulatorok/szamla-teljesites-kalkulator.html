@@ -45,33 +45,33 @@
         <h1>Számla teljesítés kalkulátor</h1>
         <p>Számold ki a számla teljesítési dátumát egyszerűen.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Teljesítési időszak vége</label>
+              <input type="date" id="periodEnd" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Teljesítési időszak vége</label>
-            <input type="date" id="periodEnd" />
+            <div>
+              <label>Számla kiállítás dátuma</label>
+              <input type="date" id="invoiceDate" />
+            </div>
+
+            <div>
+              <label>Fizetési határidő</label>
+              <input type="date" id="paymentDate" />
+            </div>
           </div>
 
-          <div>
-            <label>Számla kiállítás dátuma</label>
-            <input type="date" id="invoiceDate" />
+          <button onclick="calculateContinuous()">Számol</button>
+
+          <div class="result-box">
+            <p>Teljesítési dátum:</p>
+            <p id="result-value">–</p>
           </div>
-
-          <div>
-            <label>Fizetési határidő</label>
-            <input type="date" id="paymentDate" />
-          </div>
-        </div>
-
-        <button onclick="calculateContinuous()">Számol</button>
-
-        <div class="result-box">
-          <p>Teljesítési dátum:</p>
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <!-- SEO -->
       <section class="article">
         <h2>Mi az a számla teljesítési dátum?</h2>

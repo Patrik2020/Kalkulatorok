@@ -44,34 +44,34 @@
 
         <p>Számold ki mennyit ér a befektetésed kamatos kamattal.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Kezdőtőke (Ft)</label>
+              <input type="number" id="principal" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Kezdőtőke (Ft)</label>
-            <input type="number" id="principal" />
+            <div>
+              <label>Kamat (%)</label>
+              <input type="number" id="rate" value="5" />
+            </div>
+
+            <div>
+              <label>Évek</label>
+              <input type="number" id="years" />
+            </div>
           </div>
 
-          <div>
-            <label>Kamat (%)</label>
-            <input type="number" id="rate" value="5" />
+          <button onclick="calculateCompoundInterest()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény</p>
+
+            <p id="result-value">–</p>
           </div>
-
-          <div>
-            <label>Évek</label>
-            <input type="number" id="years" />
-          </div>
-        </div>
-
-        <button onclick="calculateCompoundInterest()">Számol</button>
-
-        <div class="result-box">
-          <p>Eredmény</p>
-
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <h2>Mi az a kamatos kamat?</h2>
         <p>

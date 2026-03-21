@@ -135,14 +135,18 @@ input:focus {
 }
 /* BUTTON */
 button {
+  display: block;
+  margin: 20px auto;
   background: #2563eb;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 25px;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+  max-width: 300px;
+  width: 100%;
 }
 button:hover {
   background: #1d4ed8;
@@ -288,4 +292,9 @@ footer {
 .section-title {
   text-align: center;
   margin-bottom: 20px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }

@@ -40,33 +40,33 @@
         <h1>Utazási költség kalkulátor</h1>
         <p>Autós utazás költségének számítása.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Távolság (km)</label>
+              <input type="number" id="tripDistance" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Távolság (km)</label>
-            <input type="number" id="tripDistance" />
+            <div>
+              <label>Fogyasztás (l/100km)</label>
+              <input type="number" id="tripConsumption" />
+            </div>
+
+            <div>
+              <label>Üzemanyag ár (Ft/l)</label>
+              <input type="number" id="fuelPrice" />
+            </div>
           </div>
 
-          <div>
-            <label>Fogyasztás (l/100km)</label>
-            <input type="number" id="tripConsumption" />
+          <button onclick="calculateTrip()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény:</p>
+            <p id="result-value">–</p>
           </div>
-
-          <div>
-            <label>Üzemanyag ár (Ft/l)</label>
-            <input type="number" id="fuelPrice" />
-          </div>
-        </div>
-
-        <button onclick="calculateTrip()">Számol</button>
-
-        <div class="result-box">
-          <p>Eredmény:</p>
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <h2>Utazási költség</h2>
         <p>

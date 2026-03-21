@@ -40,28 +40,28 @@
         <h1>ÁFA kalkulátor</h1>
         <p>ÁFA hozzáadása egyszerűen.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Összeg (Ft)</label>
+              <input type="number" id="amount" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Összeg (Ft)</label>
-            <input type="number" id="amount" />
+            <div>
+              <label>ÁFA (%)</label>
+              <input type="number" id="vat" value="27" />
+            </div>
           </div>
 
-          <div>
-            <label>ÁFA (%)</label>
-            <input type="number" id="vat" value="27" />
+          <button onclick="calculateVAT()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény:</p>
+            <p id="result-value">–</p>
           </div>
-        </div>
-
-        <button onclick="calculateVAT()">Számol</button>
-
-        <div class="result-box">
-          <p>Eredmény:</p>
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <div
           class="article"

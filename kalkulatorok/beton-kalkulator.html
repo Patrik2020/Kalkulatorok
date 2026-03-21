@@ -44,34 +44,33 @@
 
         <p>Számold ki mennyi beton szükséges.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Hossz (méter)</label>
+              <input type="number" id="length" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Hossz (méter)</label>
-            <input type="number" id="length" />
+            <div>
+              <label>Szélesség (méter)</label>
+              <input type="number" id="width" />
+
+              <div>
+                <label>Vastagság (cm)</label>
+                <input type="number" id="height" />
+              </div>
+            </div>
           </div>
+          <button onclick="calculateConcrete()">Számol</button>
 
-          <div>
-            <label>Szélesség (méter)</label>
-            <input type="number" id="width" />
+          <div class="result-box">
+            <p>Szükséges beton:</p>
+
+            <p id="result-value">–</p>
           </div>
-
-          <div>
-            <label>Vastagság (cm)</label>
-            <input type="number" id="height" />
-          </div>
-        </div>
-
-        <button onclick="calculateConcrete()">Számol</button>
-
-        <div class="result-box">
-          <p>Szükséges beton:</p>
-
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <h2>Beton mennyiség számítása</h2>
 

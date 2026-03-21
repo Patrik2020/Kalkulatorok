@@ -43,28 +43,28 @@
         <h1>Fizetési határidő kalkulátor</h1>
         <p>Számold ki mikor jár le a számla fizetési határideje.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Számla dátuma</label>
+              <input type="date" id="invoiceDate" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Számla dátuma</label>
-            <input type="date" id="invoiceDate" />
+            <div>
+              <label>Fizetési határidő (nap)</label>
+              <input type="number" id="days" value="8" />
+            </div>
           </div>
 
-          <div>
-            <label>Fizetési határidő (nap)</label>
-            <input type="number" id="days" value="8" />
+          <button onclick="calculateDeadline()">Számol</button>
+
+          <div class="result-box">
+            <p>Fizetési határidő:</p>
+            <p id="result-value">–</p>
           </div>
-        </div>
-
-        <button onclick="calculateDeadline()">Számol</button>
-
-        <div class="result-box">
-          <p>Fizetési határidő:</p>
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <h2>Mi az a fizetési határidő?</h2>
         <p>

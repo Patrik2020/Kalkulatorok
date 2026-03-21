@@ -37,28 +37,28 @@
         <h1>BMI kalkulátor</h1>
         <p>Számold ki a testtömeg indexed.</p>
       </section>
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Testsúly (kg)</label>
+              <input type="number" id="weight" />
+            </div>
 
-      <section class="card">
-        <div class="calc-grid">
-          <div>
-            <label>Testsúly (kg)</label>
-            <input type="number" id="weight" />
+            <div>
+              <label>Magasság (cm)</label>
+              <input type="number" id="height" />
+            </div>
           </div>
 
-          <div>
-            <label>Magasság (cm)</label>
-            <input type="number" id="height" />
+          <button onclick="calculateBMI()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény:</p>
+            <p id="result-value">–</p>
           </div>
-        </div>
-
-        <button onclick="calculateBMI()">Számol</button>
-
-        <div class="result-box">
-          <p>Eredmény:</p>
-          <p id="result-value">–</p>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <section class="article">
         <h2>Mi az a BMI (testtömeg index)?</h2>
 
