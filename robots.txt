@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://patrik2020.github.io/Kalkulatorok/sitemap.xml
