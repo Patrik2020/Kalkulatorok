@@ -146,7 +146,6 @@ button {
   cursor: pointer;
   transition: 0.2s;
   max-width: 300px;
-  width: 100%;
 }
 button:hover {
   background: #1d4ed8;
