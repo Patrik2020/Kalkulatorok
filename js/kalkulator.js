@@ -287,6 +287,17 @@ function calculateSalary() {
     document.getElementById("result-value").innerText = "Adj meg adatot!";
   }
 }
+// ===== SEGÉDFÜGGVÉNYEK =====
+
+function cleanNumber(value) {
+  return parseFloat(value.replace(/\s/g, ""));
+}
+
+function formatNumber(num) {
+  return Math.round(num).toLocaleString("hu-HU");
+}
+// ===== NETTÓ-BRUTTÓ PRO =====
+
 function calculateSalaryPro() {
   const amount = parseFloat(document.getElementById("amount").value);
   const mode = document.getElementById("mode").value;
@@ -298,33 +309,39 @@ function calculateSalaryPro() {
     return;
   }
 
+  let gross, net;
+
   let szjaRate = 0.15;
   let tbRate = 0.185;
 
-  let gross, net;
+  if (under25 === "yes") {
+    szjaRate = 0;
+  }
 
-  // alap számítás
   if (mode === "gross") {
     gross = amount;
   } else {
-    gross = amount / (1 - 0.335);
+    gross = amount / (1 - (szjaRate + tbRate));
   }
 
   let szja = gross * szjaRate;
   let tb = gross * tbRate;
 
-  // 25 év alatti
-  if (under25 === "yes") {
-    szja = 0;
+  net = gross - szja - tb;
+
+  // ===== CSALÁDI KEDVEZMÉNY =====
+
+  let bonus = 0;
+
+  if (children === 1) {
+    bonus = 20000;
+  } else if (children === 2) {
+    bonus = 80000;
+  } else if (children >= 3) {
+    bonus = children * 66000;
   }
 
-  // családi kedvezmény (fix Ft!)
-  let bonus = 0;
-  if (children === 1) bonus = 10000;
-  if (children === 2) bonus = 40000;
-  if (children >= 3) bonus = 99000;
-
-  net = gross - szja - tb + bonus;
+  net += bonus;
 
   document.getElementById("result-value").innerText =
     "Nettó: " +
@@ -340,13 +357,3 @@ function calculateSalaryPro() {
     Kedvezmény: +${formatNumber(bonus)} Ft
   `;
 }
-function formatNumber(num) {
-  return Math.round(num).toLocaleString("hu-HU");
-}
-document.getElementById("amount").addEventListener("input", function (e) {
-  let value = e.target.value.replace(/\D/g, "");
-  e.target.value = Number(value).toLocaleString("hu-HU");
-});
-const amount = parseFloat(
-  document.getElementById("amount").value.replace(/\s/g, ""),
-);
