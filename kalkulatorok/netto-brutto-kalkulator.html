@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nettó bruttó kalkulátor 2026 (Magyarország)</title>
+    <meta
+      name="description"
+      content="Számold ki nettó és bruttó fizetésed részletesen. Kedvezményekkel együtt!"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <nav>
+        <button onclick="goBack()" class="back-btn">← Vissza</button>
+        <a href="../index.html">Főoldal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Nettó – bruttó kalkulátor (PRO)</h1>
+        <p>Részletes fizetés számítás kedvezményekkel.</p>
+      </section>
+
+      <!-- FIGYELMEZTETÉS -->
+      <section
+        class="article"
+        style="
+          background: #fff7ed;
+          padding: 15px;
+          border-radius: 8px;
+          border: 1px solid #fed7aa;
+        "
+      >
+        <strong>Fontos:</strong> Ez a kalkulátor kizárólag Magyarországon
+        érvényes szabályok alapján működik. Az eredmények tájékoztató jellegűek.
+      </section>
+
+      <div class="container">
+        <section class="card">
+          <div class="calc-grid">
+            <div>
+              <label>Számítás típusa</label>
+              <select id="mode">
+                <option value="gross">Bruttóból nettó</option>
+                <option value="net">Nettóból bruttó</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Összeg (Ft)</label>
+              <input type="number" id="amount" />
+            </div>
+
+            <div>
+              <label>25 év alatti?</label>
+              <select id="under25">
+                <option value="no">Nem</option>
+                <option value="yes">Igen</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Gyermekek száma</label>
+              <select id="children">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+              </select>
+            </div>
+          </div>
+
+          <button onclick="calculateSalaryPro()">Számol</button>
+
+          <div class="result-box">
+            <p>Eredmény:</p>
+            <p id="result-value">–</p>
+            <div id="breakdown"></div>
+          </div>
+        </section>
+      </div>
+
+      <section class="article">
+        <h2>Mi a nettó és bruttó fizetés?</h2>
+        <p>
+          A bruttó fizetés a teljes bér, míg a nettó az az összeg, amit kézhez
+          kapsz az adók levonása után.
+        </p>
+
+        <h2>Milyen levonások vannak?</h2>
+        <ul>
+          <li>15% SZJA</li>
+          <li>18.5% TB járulék</li>
+        </ul>
+
+        <h2>Kedvezmények</h2>
+        <p>
+          A 25 év alattiak SZJA mentességet kapnak, illetve a családi kedvezmény
+          csökkenti az adóterhet.
+        </p>
+
+        <h2>GYIK</h2>
+
+        <h3>Mennyire pontos?</h3>
+        <p>Ez egy becslés, a valós számítás eltérhet.</p>
+
+        <h3>Milyen kedvezmények vannak?</h3>
+        <p>Kor és családi állapot alapján változik.</p>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

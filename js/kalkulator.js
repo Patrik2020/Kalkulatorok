@@ -269,3 +269,70 @@ function calculateFuelCost() {
 
   document.getElementById("result-value").innerText = cost.toFixed(0) + " Ft";
 }
+function calculateSalary() {
+  const gross = parseFloat(document.getElementById("gross").value);
+  const net = parseFloat(document.getElementById("net").value);
+
+  const taxRate = 0.335; // 33.5%
+
+  if (gross && gross > 0) {
+    const result = gross * (1 - taxRate);
+    document.getElementById("result-value").innerText =
+      "Nettó: " + result.toFixed(0) + " Ft";
+  } else if (net && net > 0) {
+    const result = net / (1 - taxRate);
+    document.getElementById("result-value").innerText =
+      "Bruttó: " + result.toFixed(0) + " Ft";
+  } else {
+    document.getElementById("result-value").innerText = "Adj meg adatot!";
+  }
+}
+function calculateSalaryPro() {
+  const amount = parseFloat(document.getElementById("amount").value);
+  const mode = document.getElementById("mode").value;
+  const under25 = document.getElementById("under25").value;
+  const children = parseInt(document.getElementById("children").value);
+
+  if (!amount || amount <= 0) {
+    document.getElementById("result-value").innerText = "Adj meg összeget!";
+    return;
+  }
+
+  let szja = 0.15;
+  let tb = 0.185;
+
+  // 25 év alatti kedvezmény
+  if (under25 === "yes") {
+    szja = 0;
+  }
+
+  // családi kedvezmény (egyszerűsítve)
+  let familyBonus = 0;
+  if (children === 1) familyBonus = 0.05;
+  if (children === 2) familyBonus = 0.1;
+  if (children >= 3) familyBonus = 0.15;
+
+  let totalTax = szja + tb - familyBonus;
+  if (totalTax < 0) totalTax = 0;
+
+  let net, gross;
+
+  if (mode === "gross") {
+    gross = amount;
+    net = gross * (1 - totalTax);
+  } else {
+    net = amount;
+    gross = net / (1 - totalTax);
+  }
+
+  document.getElementById("result-value").innerText =
+    "Nettó: " + net.toFixed(0) + " Ft | Bruttó: " + gross.toFixed(0) + " Ft";
+
+  document.getElementById("breakdown").innerHTML = `
+    <br>
+    <strong>Részletezés:</strong><br>
+    SZJA: ${(gross * szja).toFixed(0)} Ft<br>
+    TB: ${(gross * tb).toFixed(0)} Ft<br>
+    Kedvezmény: ${(gross * familyBonus).toFixed(0)} Ft
+  `;
+}
