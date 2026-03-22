@@ -298,41 +298,55 @@ function calculateSalaryPro() {
     return;
   }
 
-  let szja = 0.15;
-  let tb = 0.185;
+  let szjaRate = 0.15;
+  let tbRate = 0.185;
 
-  // 25 év alatti kedvezmény
+  let gross, net;
+
+  // alap számítás
+  if (mode === "gross") {
+    gross = amount;
+  } else {
+    gross = amount / (1 - 0.335);
+  }
+
+  let szja = gross * szjaRate;
+  let tb = gross * tbRate;
+
+  // 25 év alatti
   if (under25 === "yes") {
     szja = 0;
   }
 
-  // családi kedvezmény (egyszerűsítve)
-  let familyBonus = 0;
-  if (children === 1) familyBonus = 0.05;
-  if (children === 2) familyBonus = 0.1;
-  if (children >= 3) familyBonus = 0.15;
+  // családi kedvezmény (fix Ft!)
+  let bonus = 0;
+  if (children === 1) bonus = 10000;
+  if (children === 2) bonus = 40000;
+  if (children >= 3) bonus = 99000;
 
-  let totalTax = szja + tb - familyBonus;
-  if (totalTax < 0) totalTax = 0;
-
-  let net, gross;
-
-  if (mode === "gross") {
-    gross = amount;
-    net = gross * (1 - totalTax);
-  } else {
-    net = amount;
-    gross = net / (1 - totalTax);
-  }
+  net = gross - szja - tb + bonus;
 
   document.getElementById("result-value").innerText =
-    "Nettó: " + net.toFixed(0) + " Ft | Bruttó: " + gross.toFixed(0) + " Ft";
+    "Nettó: " +
+    formatNumber(net) +
+    " Ft | Bruttó: " +
+    formatNumber(gross) +
+    " Ft";
 
   document.getElementById("breakdown").innerHTML = `
-    <br>
-    <strong>Részletezés:</strong><br>
-    SZJA: ${(gross * szja).toFixed(0)} Ft<br>
-    TB: ${(gross * tb).toFixed(0)} Ft<br>
-    Kedvezmény: ${(gross * familyBonus).toFixed(0)} Ft
+    <br><strong>Részletezés:</strong><br>
+    SZJA: ${formatNumber(szja)} Ft<br>
+    TB: ${formatNumber(tb)} Ft<br>
+    Kedvezmény: +${formatNumber(bonus)} Ft
   `;
 }
+function formatNumber(num) {
+  return Math.round(num).toLocaleString("hu-HU");
+}
+document.getElementById("amount").addEventListener("input", function (e) {
+  let value = e.target.value.replace(/\D/g, "");
+  e.target.value = Number(value).toLocaleString("hu-HU");
+});
+const amount = parseFloat(
+  document.getElementById("amount").value.replace(/\s/g, ""),
+);
