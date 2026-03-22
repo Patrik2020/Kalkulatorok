@@ -2,45 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/index.html</loc>
+        <loc>https://kalkulatorbazis.hu/index.html</loc>
     </url>
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/penzugyi.html</loc>
+        <loc>https://kalkulatorbazis.hu/penzugyi.html</loc>
     </url>
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/epitoipari.html</loc>
+        <loc>https://kalkulatorbazis.hu/epitoipari.html</loc>
     </url>
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/egeszseg.html</loc>
+        <loc>https://kalkulatorbazis.hu/egeszseg.html</loc>
     </url>
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/mindennapi.html</loc>
+        <loc>https://kalkulatorbazis.hu/mindennapi.html</loc>
     </url>
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/auto.html</loc>
+        <loc>https://kalkulatorbazis.hu/auto.html</loc>
     </url>
 
-    <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/kalkulatorok/szazalek-kalkulator.html</loc>
-    </url>
+    <!-- Kalkulátorok -->
 
     <url>
-        <loc>https://patrik2020.github.io/Kalkulatorok/kalkulatorok/inflacio-kalkulator.html</loc>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/afa-kalkulator.html</loc>
     </url>
-
     <url>
-        <loc>
-            https://patrik2020.github.io/Kalkulatorok/kalkulatorok/fizetesi-hatarido-kalkulator.html</loc>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/beton-kalkulator.html</loc>
     </url>
-
     <url>
-        <loc>
-            https://patrik2020.github.io/Kalkulatorok/kalkulatorok/szamla-teljesites-kalkulator.html</loc>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/bmi-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/csempe-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/fizetesi-hatarido-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/fogyasztas-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/inflacio-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/kaloria-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/kamatos-kamat-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/netto-brutto-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/szamla-teljesites-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/szazalek-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/utazasi-koltseg-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/uzemanyag-fogyasztas-kalkulator.html</loc>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/uzemanyag-koltseg-kalkulator.html</loc>
     </url>
 
 </urlset>
