@@ -254,3 +254,18 @@ function calculateConsumption() {
   document.getElementById("result-value").innerText =
     consumption.toFixed(2) + " L/100km";
 }
+function calculateFuelCost() {
+  const distance = parseFloat(document.getElementById("distance").value);
+  const consumption = parseFloat(document.getElementById("consumption").value);
+  const price = parseFloat(document.getElementById("price").value);
+
+  if (!distance || !consumption || !price) {
+    document.getElementById("result-value").innerText =
+      "Adj meg minden adatot!";
+    return;
+  }
+
+  const cost = ((distance * consumption) / 100) * price;
+
+  document.getElementById("result-value").innerText = cost.toFixed(0) + " Ft";
+}
