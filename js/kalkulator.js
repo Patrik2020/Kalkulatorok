@@ -302,7 +302,13 @@ function calculateSalaryPro() {
   const amount = parseFloat(document.getElementById("amount").value);
   const mode = document.getElementById("mode").value;
   const under25 = document.getElementById("under25").value;
-  const children = parseInt(document.getElementById("children").value);
+
+  // 👇 EZ AZ ÚJ, EGYETLEN children változó
+  let children = parseInt(document.getElementById("children").value) || 0;
+
+  // biztonsági korlát
+  if (children < 0) children = 0;
+  if (children > 10) children = 10;
 
   if (!amount || amount <= 0) {
     document.getElementById("result-value").innerText = "Adj meg összeget!";
@@ -314,10 +320,12 @@ function calculateSalaryPro() {
   let szjaRate = 0.15;
   let tbRate = 0.185;
 
+  // 25 év alatti
   if (under25 === "yes") {
     szjaRate = 0;
   }
 
+  // bruttó ↔ nettó
   if (mode === "gross") {
     gross = amount;
   } else {
@@ -342,6 +350,8 @@ function calculateSalaryPro() {
   }
 
   net += bonus;
+
+  // ===== EREDMÉNY =====
 
   document.getElementById("result-value").innerText =
     "Nettó: " +
