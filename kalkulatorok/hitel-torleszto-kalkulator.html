@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitel törlesztő kalkulátor – havi törlesztő számítás</title>
+    <meta
+      name="description"
+      content="Számold ki a havi hiteltörlesztőt, teljes visszafizetést és kamatot egyszerűen. Magyar nyelvű hitel kalkulátor."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+
+      <nav>
+        <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="calculator">
+        <h1>Hitel törlesztő kalkulátor</h1>
+        <p>
+          Számold ki a havi törlesztőrészletet és a teljes visszafizetendő
+          összeget.
+        </p>
+
+        <div class="input-group">
+          <label>Hitel összege (Ft)</label>
+          <input type="number" id="loanAmount" />
+        </div>
+
+        <div class="input-group">
+          <label>Kamat (% / év)</label>
+          <input type="number" id="interestRate" step="0.01" />
+        </div>
+
+        <div class="input-group">
+          <label>Futamidő (év)</label>
+          <input type="number" id="years" />
+        </div>
+
+        <button onclick="calculateLoan()">Számol</button>
+
+        <div class="result" id="result">
+          <p>Eredmény: –</p>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>Mi az a hitel törlesztő?</h2>
+        <p>
+          A hitel törlesztőrészlet az az összeg, amelyet havonta kell
+          visszafizetni a bank felé. Ez tartalmazza a tőkerészt és a kamatot is.
+        </p>
+
+        <h2>Hogyan működik a kalkulátor?</h2>
+        <p>
+          A kalkulátor az annuitásos hitel képletét használja, amely a
+          leggyakoribb Magyarországon. A havi törlesztő végig azonos marad.
+        </p>
+
+        <h2>Mire figyelj?</h2>
+        <ul>
+          <li>A kamat jelentősen befolyásolja a teljes visszafizetést</li>
+          <li>Minél hosszabb a futamidő, annál többet fizetsz vissza</li>
+          <li>Ez a kalkulátor tájékoztató jellegű</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

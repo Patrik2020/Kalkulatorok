@@ -367,3 +367,96 @@ function calculateSalaryPro() {
     Kedvezmény: +${formatNumber(bonus)} Ft
   `;
 }
+function calculateLoan() {
+  const loan = parseFloat(document.getElementById("loanAmount").value);
+  const annualRate = parseFloat(document.getElementById("interestRate").value);
+  const years = parseFloat(document.getElementById("years").value);
+
+  if (!loan || !annualRate || !years) {
+    document.getElementById("result").innerHTML = "Adj meg minden adatot!";
+    return;
+  }
+
+  const monthlyRate = annualRate / 100 / 12;
+  const months = years * 12;
+
+  const monthlyPayment =
+    (loan * (monthlyRate * Math.pow(1 + monthlyRate, months))) /
+    (Math.pow(1 + monthlyRate, months) - 1);
+
+  const totalPayment = monthlyPayment * months;
+  const totalInterest = totalPayment - loan;
+
+  document.getElementById("result").innerHTML = `
+        <p><strong>Havi törlesztő:</strong> ${monthlyPayment.toLocaleString("hu-HU", { maximumFractionDigits: 0 })} Ft</p>
+        <p><strong>Teljes visszafizetés:</strong> ${totalPayment.toLocaleString("hu-HU", { maximumFractionDigits: 0 })} Ft</p>
+        <p><strong>Kamat összege:</strong> ${totalInterest.toLocaleString("hu-HU", { maximumFractionDigits: 0 })} Ft</p>
+    `;
+}
+function calculateDownPayment() {
+  const price = parseFloat(document.getElementById("propertyPrice").value);
+  const percent = parseFloat(
+    document.getElementById("downPaymentPercent").value,
+  );
+
+  if (!price || !percent) {
+    document.getElementById("result").innerHTML = "Adj meg minden adatot!";
+    return;
+  }
+
+  const downPayment = price * (percent / 100);
+  const loanAmount = price - downPayment;
+
+  let warning = "";
+
+  if (percent < 20) {
+    warning =
+      "<br><span style='color:red;'>⚠️ 20% alatt a bankok általában nem adnak hitelt!</span>";
+  }
+
+  document.getElementById("result").innerHTML = `
+        <p><strong>Önerő:</strong> ${downPayment.toLocaleString("hu-HU")} Ft</p>
+        <p><strong>Felvehető hitel:</strong> ${loanAmount.toLocaleString("hu-HU")} Ft</p>
+        ${warning}
+    `;
+}
+function calculateLoanCapacity() {
+  const income = parseFloat(document.getElementById("income").value);
+  const existing = parseFloat(document.getElementById("existingLoans").value);
+  const annualRate = parseFloat(document.getElementById("interestRate").value);
+  const years = parseFloat(document.getElementById("years").value);
+
+  if (!income || !annualRate || !years) {
+    document.getElementById("result").innerHTML = "Adj meg minden adatot!";
+    return;
+  }
+
+  // JTM szabály (egyszerűsített)
+  let maxRatio = 0.4;
+
+  if (income < 500000) {
+    maxRatio = 0.3;
+  } else if (income > 1000000) {
+    maxRatio = 0.5;
+  }
+
+  const maxMonthly = income * maxRatio - existing;
+
+  if (maxMonthly <= 0) {
+    document.getElementById("result").innerHTML =
+      "A meglévő hitelek miatt nem vehető fel új hitel.";
+    return;
+  }
+
+  const monthlyRate = annualRate / 100 / 12;
+  const months = years * 12;
+
+  const loanAmount =
+    (maxMonthly * (Math.pow(1 + monthlyRate, months) - 1)) /
+    (monthlyRate * Math.pow(1 + monthlyRate, months));
+
+  document.getElementById("result").innerHTML = `
+        <p><strong>Max havi törlesztő:</strong> ${maxMonthly.toLocaleString("hu-HU")} Ft</p>
+        <p><strong>Felvehető hitel:</strong> ${loanAmount.toLocaleString("hu-HU", { maximumFractionDigits: 0 })} Ft</p>
+    `;
+}

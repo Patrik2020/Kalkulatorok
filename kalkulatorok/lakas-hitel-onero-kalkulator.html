@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lakáshitel önerő kalkulátor – Mennyi önerő kell?</title>
+    <meta
+      name="description"
+      content="Számold ki mennyi önerő szükséges lakáshitelhez és mekkora hitelt vehetsz fel. Gyors és egyszerű kalkulátor."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://kalkulatorbazis.hu/kalkulatorok/lakas-hitel-onero-kalkulator.html"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+
+      <nav>
+        <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="calculator">
+        <h1>Lakáshitel önerő kalkulátor</h1>
+        <p>
+          Számold ki, mennyi önerő szükséges egy ingatlan megvásárlásához és
+          mekkora hitelt vehetsz fel.
+        </p>
+
+        <div class="input-group">
+          <label>Ingatlan ára (Ft)</label>
+          <input type="number" id="propertyPrice" />
+        </div>
+
+        <div class="input-group">
+          <label>Önerő (%)</label>
+          <input type="number" id="downPaymentPercent" value="20" />
+        </div>
+
+        <button onclick="calculateDownPayment()">Számol</button>
+
+        <div class="result" id="result">
+          <p>Eredmény: –</p>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>Mennyi önerő kell lakáshitelhez?</h2>
+        <p>
+          Magyarországon általában minimum 20% önerő szükséges egy lakáshitel
+          felvételéhez, de ez bankonként eltérhet.
+        </p>
+
+        <h2>Mit jelent az önerő?</h2>
+        <p>
+          Az önerő az az összeg, amelyet saját forrásból kell biztosítani az
+          ingatlan megvásárlásához. A fennmaradó részt hitelből fedezheted.
+        </p>
+
+        <h2>Fontos tudnivalók</h2>
+        <ul>
+          <li>Minél magasabb az önerő, annál kedvezőbb hitelt kaphatsz</li>
+          <li>Az önerő csökkenti a havi törlesztőrészletet</li>
+          <li>Ez a kalkulátor tájékoztató jellegű</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
