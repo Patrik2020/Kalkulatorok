@@ -508,3 +508,30 @@ function calculateETF() {
         <p><strong>Nyereség:</strong> ${profit.toLocaleString("hu-HU")} Ft</p>
     `;
 }
+function calculateMillionaire() {
+  let current = parseFloat(document.getElementById("current").value) || 0;
+  let monthly = parseFloat(document.getElementById("monthly").value) || 0;
+  let rate = parseFloat(document.getElementById("rate").value);
+  let goal = parseFloat(document.getElementById("goal").value);
+
+  if (!rate || !goal) {
+    document.getElementById("result").innerHTML = "Adj meg minden adatot!";
+    return;
+  }
+
+  let monthlyRate = rate / 100 / 12;
+  let months = 0;
+
+  while (current < goal && months < 1000) {
+    current = current * (1 + monthlyRate) + monthly;
+    months++;
+  }
+
+  let years = Math.floor(months / 12);
+  let remainingMonths = months % 12;
+
+  document.getElementById("result").innerHTML = `
+        <p><strong>Idő:</strong> ${years} év ${remainingMonths} hónap</p>
+        <p><strong>Elért összeg:</strong> ${current.toLocaleString("hu-HU")} Ft</p>
+    `;
+}

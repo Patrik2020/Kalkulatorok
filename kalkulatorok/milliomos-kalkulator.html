@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mikor leszek milliomos? kalkulátor</title>
+    <meta
+      name="description"
+      content="Számold ki, mennyi idő alatt éred el az első milliódat befektetéssel."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="canonical"
+      href="https://kalkulatorbazis.hu/kalkulatorok/milliomos-kalkulator.html"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+    </header>
+
+    <main>
+      <section class="calculator">
+        <h1>Mikor leszek milliomos?</h1>
+        <p>Számold ki, mennyi idő alatt éred el a célösszeget befektetéssel.</p>
+
+        <div class="input-group">
+          <label>Jelenlegi megtakarítás (Ft)</label>
+          <input type="number" id="current" />
+        </div>
+
+        <div class="input-group">
+          <label>Havi befizetés (Ft)</label>
+          <input type="number" id="monthly" />
+        </div>
+
+        <div class="input-group">
+          <label>Éves hozam (%)</label>
+          <input type="number" id="rate" value="8" />
+        </div>
+
+        <div class="input-group">
+          <label>Célösszeg (Ft)</label>
+          <input type="number" id="goal" value="1000000" />
+        </div>
+
+        <button onclick="calculateMillionaire()">Számol</button>
+
+        <div class="result" id="result">
+          <p>Eredmény: –</p>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>Hogyan működik?</h2>
+        <p>
+          A kalkulátor figyelembe veszi a rendszeres befizetéseket és a kamatos
+          kamat hatását.
+        </p>
+
+        <h2>Miért fontos?</h2>
+        <p>
+          A hosszú távú befektetés és a következetesség kulcsfontosságú a
+          vagyonépítéshez.
+        </p>
+
+        <h2>Példa</h2>
+        <p>
+          Ha havonta 50 000 Ft-ot fektetsz be, akár néhány év alatt elérheted az
+          első milliót.
+        </p>
+
+        <p>
+          <strong>Figyelem:</strong> Ez a kalkulátor becslést ad, a valós hozam
+          eltérhet.
+        </p>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>
