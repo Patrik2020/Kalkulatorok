@@ -94,8 +94,7 @@
         <lastmod>2026-03-23</lastmod>
     </url>
 
-    <!-- ÚJAK -->
-
+    <!-- Hitel kalkulátorok -->
     <url>
         <loc>https://kalkulatorbazis.hu/kalkulatorok/hitel-torleszto-kalkulator.html</loc>
         <lastmod>2026-03-23</lastmod>
@@ -106,6 +105,16 @@
     </url>
     <url>
         <loc>https://kalkulatorbazis.hu/kalkulatorok/hitelkepesseg-kalkulator.html</loc>
+        <lastmod>2026-03-23</lastmod>
+    </url>
+
+    <!-- Befektetés -->
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/osztalek-kalkulator.html</loc>
+        <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+        <loc>https://kalkulatorbazis.hu/kalkulatorok/etf-kalkulator.html</loc>
         <lastmod>2026-03-23</lastmod>
     </url>
 

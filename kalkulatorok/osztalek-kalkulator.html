@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osztalék kalkulátor</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Osztalék kalkulátor – passzív jövedelem számítás</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="../index.html">📊 KalkulátorBázis</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Osztalék kalkulátor</h1>
+      <p>
+        Számold ki, mennyi passzív jövedelmet hoz a befektetésed osztalékból.
+      </p>
+
+      <div class="calculator-box">
+        <label>Befektetett összeg (Ft)</label>
+        <input type="number" id="amount" placeholder="pl. 1000000" />
+
+        <label>Osztalék hozam (%)</label>
+        <input type="number" id="yield" placeholder="pl. 5" />
+
+        <label>Időtáv (év)</label>
+        <input type="number" id="years" placeholder="pl. 10" />
+
+        <button onclick="calculateDividend()">Számol</button>
+
+        <div class="result">
+          <p>Éves osztalék: <span id="yearly">-</span></p>
+          <p>Teljes osztalék: <span id="total">-</span></p>
+        </div>
+      </div>
+
+      <section class="description">
+        <h2>Mi az osztalék?</h2>
+        <p>
+          Az osztalék a részvények után fizetett jövedelem, amit a cég a
+          nyereségéből fizet ki a befektetőknek.
+        </p>
+
+        <h2>Hogyan működik?</h2>
+        <p>
+          A kalkulátor kiszámolja az éves és több éves osztalék bevételedet a
+          megadott hozam alapján.
+        </p>
+
+        <h2>Példa</h2>
+        <p>
+          1 000 000 Ft befektetés 5% hozammal évente 50 000 Ft osztalékot
+          jelent.
+        </p>
+
+        <p>
+          <strong>Figyelem:</strong> Ez a kalkulátor tájékoztató jellegű, a
+          valós hozam változhat.
+        </p>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

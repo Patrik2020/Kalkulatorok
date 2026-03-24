@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4JBY0GDC4C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ETF hozam kalkulátor</title>
+    <meta
+      name="description"
+      content="Számold ki ETF befektetésed jövőbeli értékét és hozamát."
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="canonical"
+      href="https://kalkulatorbazis.hu/kalkulatorok/etf-kalkulator.html"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+    </header>
+
+    <main>
+      <section class="calculator">
+        <h1>ETF hozam kalkulátor</h1>
+        <p>Számold ki, mennyit ér a befektetésed évek múlva.</p>
+
+        <div class="input-group">
+          <label>Kezdő befektetés (Ft)</label>
+          <input type="number" id="initial" />
+        </div>
+
+        <div class="input-group">
+          <label>Havi befizetés (Ft)</label>
+          <input type="number" id="monthly" />
+        </div>
+
+        <div class="input-group">
+          <label>Éves hozam (%)</label>
+          <input type="number" id="rate" value="8" />
+        </div>
+
+        <div class="input-group">
+          <label>Időtáv (év)</label>
+          <input type="number" id="years" />
+        </div>
+
+        <button onclick="calculateETF()">Számol</button>
+
+        <div class="result" id="result">
+          <p>Eredmény: –</p>
+        </div>
+      </section>
+
+      <section class="info">
+        <h2>Mi az ETF?</h2>
+        <p>
+          Az ETF (tőzsdén kereskedett alap) egy olyan befektetési forma, amely
+          több részvényt tartalmaz egy csomagban.
+        </p>
+
+        <h2>Hogyan számolunk?</h2>
+        <p>
+          A kalkulátor kamatos kamat elven számolja a befektetés növekedését.
+        </p>
+
+        <h2>Miért fontos?</h2>
+        <p>
+          A hosszú távú befektetés és a rendszeres befizetés jelentősen növeli a
+          hozamot.
+        </p>
+      </section>
+    </main>
+
+    <script src="../js/kalkulator.js"></script>
+  </body>
+</html>

@@ -460,3 +460,51 @@ function calculateLoanCapacity() {
         <p><strong>Felvehető hitel:</strong> ${loanAmount.toLocaleString("hu-HU", { maximumFractionDigits: 0 })} Ft</p>
     `;
 }
+function calculateDividend() {
+  const amount = parseFloat(document.getElementById("amount").value);
+  const yieldRate = parseFloat(document.getElementById("yield").value);
+  const years = parseFloat(document.getElementById("years").value);
+
+  if (isNaN(amount) || isNaN(yieldRate) || isNaN(years)) {
+    alert("Kérlek minden mezőt tölts ki!");
+    return;
+  }
+
+  const yearlyDividend = amount * (yieldRate / 100);
+  const totalDividend = yearlyDividend * years;
+
+  document.getElementById("yearly").innerText =
+    yearlyDividend.toLocaleString("hu-HU") + " Ft";
+
+  document.getElementById("total").innerText =
+    totalDividend.toLocaleString("hu-HU") + " Ft";
+}
+function calculateETF() {
+  const initial = parseFloat(document.getElementById("initial").value) || 0;
+  const monthly = parseFloat(document.getElementById("monthly").value) || 0;
+  const rate = parseFloat(document.getElementById("rate").value);
+  const years = parseFloat(document.getElementById("years").value);
+
+  if (!rate || !years) {
+    document.getElementById("result").innerHTML = "Adj meg minden adatot!";
+    return;
+  }
+
+  const months = years * 12;
+  const monthlyRate = rate / 100 / 12;
+
+  let total = initial;
+
+  for (let i = 0; i < months; i++) {
+    total = total * (1 + monthlyRate) + monthly;
+  }
+
+  const invested = initial + monthly * months;
+  const profit = total - invested;
+
+  document.getElementById("result").innerHTML = `
+        <p><strong>Végösszeg:</strong> ${total.toLocaleString("hu-HU")} Ft</p>
+        <p><strong>Befizetett összeg:</strong> ${invested.toLocaleString("hu-HU")} Ft</p>
+        <p><strong>Nyereség:</strong> ${profit.toLocaleString("hu-HU")} Ft</p>
+    `;
+}
