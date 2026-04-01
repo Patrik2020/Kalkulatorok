@@ -5,6 +5,82 @@
   padding: 0;
 }
 
+/*Frissítés*/
+.update-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  padding: 0 15px;
+}
+
+.update-card {
+  max-width: 620px;
+  width: 100%;
+  text-align: center;
+  padding: 35px 25px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+
+  transition: all 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+.icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+  animation: pulse 1.6s infinite;
+}
+
+.update-card h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.update-card p {
+  font-size: 15.5px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.cta {
+  display: inline-block;
+  font-weight: 600;
+  color: #007bff;
+  font-size: 15px;
+}
+
+/* animáció */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* mobil */
+@media (max-width: 480px) {
+  .update-card {
+    padding: 25px 15px;
+  }
+
+  .update-card h2 {
+    font-size: 21px;
+  }
+
+  .update-card p {
+    font-size: 14px;
+  }
+}
 /* BASE */
 body {
   font-family:
