@@ -7,6 +7,8 @@
 
   if (!accepted) {
     banner.style.display = "flex";
+  } else if (accepted === "accepted") {
+    loadAnalytics(); // 💥 EZ HIÁNYZOTT
   }
 
   const acceptBtn = document.getElementById("accept-cookies");
@@ -16,7 +18,6 @@
     acceptBtn.addEventListener("click", () => {
       localStorage.setItem("cookieConsent", "accepted");
       banner.style.display = "none";
-
       loadAnalytics();
     });
   }

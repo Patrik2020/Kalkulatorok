@@ -211,6 +211,11 @@ footer {
 .footer-links a:active {
   transform: scale(0.95);
 }
+/* ===== COOKIE BANNER FIX ===== */
+
+#cookie-banner {
+  display: none;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   nav {
