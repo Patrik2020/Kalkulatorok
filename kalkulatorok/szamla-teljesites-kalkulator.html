@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,15 +14,20 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/szamla-teljesites.css" />
   </head>
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="../index.html" class="logo">🧮 Kalkulátor Bázis</a>
 
-      <nav>
-        <button onclick="goBack()" class="back-btn">← Vissza</button>
+      <nav id="menu">
         <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
       </nav>
     </header>
 
@@ -70,42 +61,140 @@
             <p>Teljesítési dátum:</p>
             <p id="result-value">–</p>
           </div>
+          <h2>Kapcsolódó kalkulátorok</h2>
+          <p>Ezek is hasznosak lehetnek:</p>
+          <div>
+            <a href="fizetesi-hatarido-kalkulator.html"
+              >Fizetési határidő kalkulátor</a
+            >
+            <a href="afa-kalkulator.html">ÁFA kalkulátor</a>
+            <a href="szamla-kalkulator.html">Számla kalkulátor</a>
+          </div>
         </section>
       </div>
       <!-- SEO -->
       <section class="article">
-        <h2>Mi az a számla teljesítési dátum?</h2>
-
+        <h2>Számla teljesítési dátum kalkulátor – teljes útmutató 2026</h2>
         <p>
-          A számla teljesítési dátuma az az időpont, amikor a termék átadása
-          vagy a szolgáltatás teljesítése megtörtént. Folyamatos teljesítés
-          esetén speciális szabályok érvényesek, amelyeket ez a kalkulátor is
-          figyelembe vesz.
+          A <strong>számla teljesítési dátuma</strong> kulcsfontosságú a
+          könyvelés és az áfa szempontjából. Ezzel a számla teljesítési
+          kalkulátorral könnyedén kiszámolhatod, hogy mikor keletkezik az áfa
+          fizetési kötelezettség, különösen
+          <strong>folyamatos teljesítésű szolgáltatások</strong> esetén.
         </p>
 
-        <h2>Hogyan számoljuk a teljesítési dátumot?</h2>
+        <h2>Mi az a teljesítési dátum?</h2>
+        <p>
+          A teljesítési dátum az az időpont, amikor a szolgáltatás vagy termék
+          átadása megtörtént. Ez határozza meg, hogy melyik időszakban kell az
+          áfát bevallani és megfizetni.
+        </p>
+
+        <h2>Folyamatos teljesítés szabályai</h2>
+        <p>
+          Folyamatos teljesítés esetén (például előfizetések, bérleti díjak,
+          szolgáltatások) a teljesítési dátum meghatározása speciális szabályok
+          szerint történik.
+        </p>
 
         <ul>
-          <li>Alapeset: a fizetési határidő napja</li>
-          <li>Ha a fizetési határidő túl késői → max +60 nap</li>
+          <li>
+            Alapesetben a <strong>fizetési határidő napja</strong> számít
+            teljesítési dátumnak
+          </li>
+          <li>
+            Ha a fizetési határidő túl késői → maximum
+            <strong>+60 nap</strong> az időszak végétől
+          </li>
+          <li>
+            Ha a fizetés korábban történik → az is befolyásolhatja a teljesítést
+          </li>
         </ul>
-      </section>
 
-      <!-- GYIK -->
-      <section class="article">
+        <h2>Hogyan működik a kalkulátor?</h2>
+        <p>A kalkulátor figyelembe veszi:</p>
+
+        <ul>
+          <li>a teljesítési időszak végét</li>
+          <li>a számla kiállítás dátumát</li>
+          <li>a fizetési határidőt</li>
+        </ul>
+
+        <p>
+          Ezek alapján kiszámolja a jogszabály szerinti helyes
+          <strong>teljesítési dátumot</strong>.
+        </p>
+
+        <h2>Példa számla teljesítési dátum számításra</h2>
+        <p>Tegyük fel, hogy:</p>
+
+        <ul>
+          <li>időszak vége: 2026. március 31.</li>
+          <li>fizetési határidő: 2026. május 10.</li>
+        </ul>
+
+        <p>
+          Mivel ez több mint 60 nap az időszak végétől, a teljesítési dátum
+          <strong>2026. május 30.</strong> lesz a jogszabály szerint.
+        </p>
+
+        <h2>Miért fontos a helyes teljesítési dátum?</h2>
+        <ul>
+          <li>meghatározza az áfa fizetés időpontját</li>
+          <li>elkerülhetők a könyvelési hibák</li>
+          <li>csökkenti a NAV bírság kockázatát</li>
+        </ul>
+
+        <h2>Gyakori hibák számlázáskor</h2>
+        <ul>
+          <li>rossz teljesítési dátum megadása</li>
+          <li>60 napos szabály figyelmen kívül hagyása</li>
+          <li>fizetési határidő és teljesítés összekeverése</li>
+        </ul>
+
         <h2>Gyakran ismételt kérdések</h2>
 
-        <h3>Mi számít folyamatos teljesítésnek?</h3>
-        <p>Olyan szolgáltatás, amely időszakon keresztül történik.</p>
+        <p>
+          <strong>Mi számít folyamatos teljesítésnek?</strong><br />
+          Olyan szolgáltatás, amely nem egyszeri, hanem időszakon keresztül
+          történik (pl. bérlet, előfizetés).
+        </p>
 
-        <h3>Miért fontos a teljesítési dátum?</h3>
-        <p>Az ÁFA fizetés időpontját határozza meg.</p>
+        <p>
+          <strong>Mindig a fizetési határidő a teljesítési dátum?</strong><br />
+          Nem. Ha a határidő túl késői, akkor a 60 napos szabály lép életbe.
+        </p>
+
+        <p>
+          <strong>Mi történik, ha rossz dátum kerül a számlára?</strong><br />
+          Hibás áfa bevalláshoz vezethet, ami bírságot is eredményezhet.
+        </p>
       </section>
     </main>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
 
-    <footer>
-      <p>© 2026 KalkulátorBázis</p>
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/cookie.js" defer></script>
+  <script src="../js/penzugyi/szamlazasi/szamla-teljesites.js" defer></script>
 </html>

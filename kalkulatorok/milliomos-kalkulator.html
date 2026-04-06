@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -26,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/milliomos.css" />
     <link
       rel="canonical"
       href="https://kalkulatorbazis.hu/kalkulatorok/milliomos-kalkulator.html"
@@ -34,7 +21,15 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="../index.html" class="logo">🧮 Kalkulátor Bázis</a>
+      <nav id="menu">
+        <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
+      </nav>
     </header>
 
     <main>
@@ -44,12 +39,12 @@
 
         <div class="input-group">
           <label>Jelenlegi megtakarítás (Ft)</label>
-          <input type="number" id="current" />
+          <input type="text" id="current" inputmode="numeric" />
         </div>
 
         <div class="input-group">
           <label>Havi befizetés (Ft)</label>
-          <input type="number" id="monthly" />
+          <input type="text" id="monthly" inputmode="numeric" />
         </div>
 
         <div class="input-group">
@@ -70,37 +65,123 @@
       </section>
 
       <section class="info">
-        <h2>Hogyan működik a számítás?</h2>
+        <h2>Mikor leszek milliomos? – teljes útmutató 2026</h2>
         <p>
-          A megtakarításaid növekedése függ a havi befizetéstől, a hozamtól és
-          az időtől.
+          Sokan teszik fel a kérdést: <strong>mikor leszek milliomos?</strong> A
+          válasz nem szerencse kérdése, hanem tudatos pénzügyi tervezés
+          eredménye. Ezzel a milliomos kalkulátorral könnyedén kiszámolhatod,
+          hogy a jelenlegi megtakarításaid, havi befizetéseid és várható hozamod
+          alapján mennyi idő alatt érheted el az első milliót vagy akár a 100
+          millió forintot.
         </p>
 
-        <h2>Példa</h2>
+        <h2>Hogyan működik a milliomos kalkulátor?</h2>
         <p>
-          Havi 100 000 Ft befektetéssel és 8% hozammal kb. 15-20 év alatt érhető
-          el a 100 millió Ft.
+          A kalkulátor figyelembe veszi a
+          <strong>kamatos kamat hatását</strong>, ami az egyik legerősebb eszköz
+          a vagyonépítésben. Minél hosszabb ideig fektetsz be, annál nagyobb
+          szerepet kap a hozam újrabefektetése, így a pénzed exponenciálisan
+          növekedhet.
         </p>
 
-        <h2>Mi gyorsítja a folyamatot?</h2>
+        <h2>Mennyi idő alatt lehet valaki milliomos?</h2>
+        <p>Ez több tényezőtől függ:</p>
         <ul>
-          <li>Magasabb havi befizetés</li>
-          <li>Nagyobb hozam</li>
-          <li>Hosszabb időtáv</li>
+          <li>mennyi a jelenlegi megtakarításod</li>
+          <li>mennyit tudsz havonta félretenni</li>
+          <li>mekkora éves hozamot érsz el</li>
+          <li>mennyi ideig fektetsz be</li>
+        </ul>
+        <p>
+          Például havi 100 000 Ft befektetéssel és évi 8% hozammal hosszú távon
+          több tízmillió forintos vagyon is felépíthető.
+        </p>
+
+        <h2>Mi a kamatos kamat és miért fontos?</h2>
+        <p>
+          A <strong>kamatos kamat</strong> azt jelenti, hogy nemcsak a
+          befektetett tőkéd, hanem az elért hozam is tovább termel hozamot. Ez
+          az oka annak, hogy a korán elkezdett befektetés hatalmas előnyt
+          jelent.
+        </p>
+
+        <h2>Hogyan érheted el gyorsabban a célösszeget?</h2>
+        <ul>
+          <li>növeld a havi befizetést</li>
+          <li>keress magasabb hozamú befektetéseket</li>
+          <li>fektess be hosszabb időtávra</li>
+          <li>kezdd el minél korábban</li>
         </ul>
 
         <h2>Kapcsolódó kalkulátorok</h2>
-        <p><a href="etf-kalkulator.html">ETF kalkulátor</a></p>
         <p>
-          <a href="kamatos-kamat-kalkulator.html">Kamatos kamat kalkulátor</a>
+          Ha komolyan gondolod a vagyonépítést, érdemes ezeket is kipróbálni:
+        </p>
+        <ul>
+          <li>
+            <a href="etf-kalkulator.html">ETF kalkulátor</a> – hosszú távú
+            befektetés növekedése
+          </li>
+          <li>
+            <a href="kamatos-kamat-kalkulator.html">Kamatos kamat kalkulátor</a>
+            – hozam hatás vizsgálata
+          </li>
+          <li>
+            <a href="osztalek-kalkulator.html">Osztalék kalkulátor</a> – passzív
+            jövedelem számítás
+          </li>
+        </ul>
+
+        <h2>Gyakori kérdések</h2>
+
+        <p>
+          <strong>Reálisan elérhető a milliomossá válás?</strong><br />
+          Igen, megfelelő pénzügyi tudatossággal és hosszú távú befektetéssel
+          bárki elérheti.
         </p>
 
-        <p><strong>Ez egy becslés.</strong></p>
+        <p>
+          <strong>Mennyi havi befizetés szükséges?</strong><br />
+          Már havi kisebb összegekkel is elindulhatsz, de minél többet fektetsz
+          be, annál gyorsabb az eredmény.
+        </p>
+
+        <p>
+          <strong>Milyen hozammal érdemes számolni?</strong><br />
+          Hosszú távon általában évi 6–8% reális egy diverzifikált befektetés
+          esetén.
+        </p>
+
+        <p>
+          <strong>Ez a kalkulátor pontos?</strong><br />
+          A számítás becslés, a valós hozam piaci körülményektől függ.
+        </p>
       </section>
     </main>
-    <footer>
-      <p>© 2026 KalkulátorBázis</p>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
+
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/cookie.js" defer></script>
+  <script src="../js/penzugyi/milliomos.js" defer></script>
 </html>

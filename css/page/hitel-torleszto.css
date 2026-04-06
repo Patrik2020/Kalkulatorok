@@ -1,0 +1,152 @@
+/* ===== CALCULATOR WRAPPER ===== */
+.calculator {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* ===== TITLE ===== */
+.calculator h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* ===== DESCRIPTION ===== */
+.calculator p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* ===== LABEL ===== */
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* ===== INPUT ===== */
+.input-group input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* ===== INPUT FOCUS ===== */
+.input-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+  transform: scale(1.02);
+}
+
+/* ===== NUMBER INPUT CENTER ===== */
+#loanAmount {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* ===== BUTTON ===== */
+.calculator button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4caf50, #43a047);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calculator button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* ===== RESULT ===== */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border: 1px solid #bbf7d0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #166534;
+}
+
+/* ===== CALC LINKS ===== */
+.calc-links {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.calc-links a {
+  display: block;
+  text-decoration: none;
+  background: #f5f7fa;
+  padding: 10px;
+  border-radius: 8px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.calc-links a:hover {
+  background: #e8f5e9;
+  transform: translateY(-2px);
+}
+
+/* ===== INFO SECTION ===== */
+.info {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.info h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.info ul {
+  padding-left: 20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .calculator {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .calculator h1 {
+    font-size: 22px;
+  }
+
+  .result {
+    font-size: 18px;
+  }
+}

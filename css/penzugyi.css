@@ -1,0 +1,100 @@
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  margin: 40px 0 30px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* ===== GRID ===== */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* hover effekt */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ICON ===== */
+.icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* ===== TITLE ===== */
+.card h2,
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* ===== BUTTON LINK ===== */
+.card a {
+  text-decoration: none;
+  background: linear-gradient(135deg, #4caf50, #43a047);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+/* hover */
+.card a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  margin: 40px 0 20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

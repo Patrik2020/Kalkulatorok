@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -30,17 +16,17 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="index.html" class="logo">🧮 Kalkulátor Bázis</a>
 
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
       <nav id="menu">
-        <a href="../index.html">Főoldal</a>
-        <a href="../penzugyi.html">Pénzügyi</a>
-        <a href="../epitoipari.html">Építőipari</a>
-        <a href="../egeszseg.html">Egészség</a>
-        <a href="../mindennapi.html">Mindennapi</a>
-        <a href="../auto.html">Autó</a>
+        <a href="index.html">Főoldal</a>
+        <a href="penzugyi.html">Pénzügyi</a>
+        <a href="epitoipari.html">Építőipari</a>
+        <a href="egeszseg.html">Egészség</a>
+        <a href="mindennapi.html">Mindennapi</a>
+        <a href="auto.html">Autó</a>
       </nav>
     </header>
 
@@ -73,15 +59,29 @@
         </div>
       </section>
     </main>
+<div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
 
-    <footer>
-      <p>© 2026 KalkulátorHub</p>
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
-    <div id="cookie-banner">
-      <p>Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.</p>
-
-      <button onclick="acceptCookies()">Elfogadom</button>
     </div>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="js/cookie.js" defer></script>
 </html>

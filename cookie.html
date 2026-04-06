@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,7 +11,7 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="index.html" class="logo">🧮 Kalkulátor Bázis</a>
 
       <nav>
         <a href="index.html">Főoldal</a>
@@ -36,39 +22,81 @@
       <h1>Süti (Cookie) tájékoztató</h1>
 
       <p>
-        A weboldal sütiket használ a felhasználói élmény javítása érdekében.
+        A Kalkulátor Bázis weboldal sütiket használ a felhasználói élmény
+        javítása, valamint statisztikai és hirdetési célokból.
       </p>
 
       <h2>Mik azok a sütik?</h2>
+      <p>
+        A sütik (cookie-k) kis szöveges fájlok, amelyeket a böngésző tárol az Ön
+        eszközén. Segítségükkel a weboldal felismeri a felhasználót és megjegyzi
+        beállításait.
+      </p>
+
+      <h2>Milyen sütiket használunk?</h2>
+
+      <ul>
+        <li>
+          <strong>Szükséges sütik:</strong> a weboldal működéséhez
+          elengedhetetlenek
+        </li>
+        <li>
+          <strong>Analitikai sütik:</strong> látogatottság mérés (Google
+          Analytics)
+        </li>
+        <li>
+          <strong>Marketing sütik:</strong> hirdetések megjelenítése (Google
+          AdSense)
+        </li>
+      </ul>
+
+      <h2>Harmadik fél szolgáltatások</h2>
+
+      <p>A weboldal az alábbi szolgáltatásokat használhatja:</p>
+
+      <ul>
+        <li>Google Analytics</li>
+        <li>Google AdSense</li>
+      </ul>
 
       <p>
-        A sütik kis szöveges fájlok, amelyeket a böngésző tárol a felhasználó
+        Ezek a szolgáltatók saját sütiket helyezhetnek el a felhasználó
         eszközén.
       </p>
 
-      <h2>Mire használjuk?</h2>
-
-      <ul>
-        <li>statisztikai elemzés</li>
-        <li>weboldal működésének javítása</li>
-      </ul>
-
-      <h2>Harmadik fél sütik</h2>
+      <h2>Sütik kezelése</h2>
 
       <p>
-        A weboldal használhat harmadik fél szolgáltatásokat, például Google
-        Analytics-et.
+        A felhasználó a böngésző beállításaiban bármikor letilthatja vagy
+        törölheti a sütiket.
       </p>
+
+      <h2>Kapcsolat</h2>
+
+      <p>Email: kalkulatorbazis@gmail.com</p>
     </main>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
 
-    <footer>
-      <p>© 2026 KalkulátorHub</p>
-    </footer>
-    <div id="cookie-banner">
-      <p>Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.</p>
-
-      <button onclick="acceptCookies()">Elfogadom</button>
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
     </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+        </div>
+      </div>
+    </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/cookie.js" defer></script>
 </html>

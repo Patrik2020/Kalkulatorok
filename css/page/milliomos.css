@@ -1,0 +1,162 @@
+/* ===== CALCULATOR WRAPPER ===== */
+.calculator {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow effect */
+.calculator::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.08), transparent);
+  pointer-events: none;
+}
+
+/* ===== TITLE ===== */
+.calculator h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+.calculator p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* ===== INPUT GROUP ===== */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+/* ===== LABEL ===== */
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* ===== INPUT ===== */
+.input-group input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+/* ===== INPUT FOCUS ===== */
+.input-group input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+  transform: scale(1.02);
+}
+
+/* ===== KIEMELT INPUT (goal) ===== */
+#goal {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ===== BUTTON ===== */
+.calculator button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.calculator button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.35);
+}
+
+/* ===== RESULT BOX ===== */
+.result {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border: 1px solid #a7f3d0;
+  text-align: center;
+}
+
+/* ===== RESULT VALUE ===== */
+.result strong {
+  display: block;
+  font-size: 34px;
+  font-weight: 800;
+  color: #065f46;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* ===== INFO SECTION ===== */
+.info {
+  max-width: 750px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.info h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.info ul {
+  padding-left: 20px;
+}
+
+/* ===== LINKS ===== */
+.info a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .calculator {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .calculator h1 {
+    font-size: 22px;
+  }
+
+  .result strong {
+    font-size: 26px;
+  }
+}

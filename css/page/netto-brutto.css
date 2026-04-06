@@ -1,0 +1,131 @@
+/* ===== HERO FINOMÍTÁS ===== */
+.hero {
+  margin-bottom: 30px;
+}
+
+/* ===== FIGYELMEZTETŐ BLOKK TUNING ===== */
+.article {
+  margin: 20px 10%;
+}
+
+/* ===== CALCULATOR CARD EXTRA ===== */
+.card {
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* ===== INPUT GRID SPACING ===== */
+.calc-grid {
+  margin-top: 10px;
+  justify-items: center;
+}
+/* input blokkok fix szélesség */
+.calc-grid > div {
+  width: 100%;
+  max-width: 250px;
+}
+/* ===== INPUT KIEMELÉS ===== */
+input#amount {
+  font-weight: 500;
+}
+
+/* ===== SELECT STYLING ===== */
+select {
+  cursor: pointer;
+}
+
+/* ===== BUTTON EXTRA ===== */
+button {
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== RESULT BOX BOOST ===== */
+.result-box {
+  max-width: 400px;
+  margin: 25px auto 0;
+  padding: 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border: 1px solid #bbf7d0;
+}
+
+/* ===== RESULT VALUE MEGA KIEMELÉS ===== */
+#result-value {
+  font-size: 34px;
+  font-weight: 500;
+  margin-top: 8px;
+  color: #166534;
+  letter-spacing: 1px;
+}
+
+/* ===== BREAKDOWN SZÉPÍTÉS ===== */
+#breakdown {
+  margin-top: 15px;
+  text-align: left;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: 1px solid #eee;
+}
+
+/* ===== CALC LINKS GRID ===== */
+.calc-links {
+  margin: 20px auto;
+  display: grid;
+  gap: 10px;
+  width: max-content;
+}
+
+/* ===== LINK KÁRTYA STYLE ===== */
+.calc-links a {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ===== HOVER EXTRA ===== */
+.calc-links a:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== ARTICLE TUNING ===== */
+.article h2 {
+  font-size: 20px;
+}
+
+/* ===== SZÁM INPUT FIX ===== */
+input#amount {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* szám mezők általánosan */
+input[type="text"],
+input[type="number"] {
+  text-align: center;
+}
+
+/* focus-nál még jobban nézzen ki */
+input:focus {
+  transform: scale(1.02);
+}
+/* ===== KALKULÁTOR SZŰKÍTÉS ===== */
+.container {
+  max-width: 600px; /* eddig 800 volt */
+  margin: auto;
+}
+/* ===== MOBILE BOOST ===== */
+@media (max-width: 768px) {
+  #result-value {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

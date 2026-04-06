@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,7 +11,7 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="index.html" class="logo">🧮 Kalkulátor Bázis</a>
 
       <nav>
         <a href="index.html">Főoldal</a>
@@ -35,97 +21,79 @@
     <main class="article">
       <h1>Adatvédelmi tájékoztató</h1>
 
-      <p>
-        A KalkulátorHub weboldal elkötelezett a látogatók személyes adatainak
-        védelme iránt. Jelen tájékoztató ismerteti, hogy milyen adatokat
-        gyűjtünk és hogyan kezeljük azokat.
-      </p>
+      <p>A Kalkulátor Bázis elkötelezett a személyes adatok védelme mellett.</p>
 
-      <h2>1. Milyen adatokat gyűjtünk?</h2>
+      <h2>Adatkezelő adatai</h2>
 
       <p>
-        A weboldal nem gyűjt közvetlenül személyes adatokat (például név, email
-        cím). Azonban a weboldal használata során automatikusan gyűjtésre
-        kerülhetnek technikai adatok.
+        Név: Kovács Patrik<br />
+        Email: kalkulatorbazis@gmail.com<br />
+        Ország: Magyarország
       </p>
+
+      <h2>Milyen adatokat gyűjtünk?</h2>
 
       <ul>
         <li>IP-cím (anonimizált formában)</li>
-        <li>böngésző típusa</li>
-        <li>látogatás időpontja</li>
-        <li>megtekintett oldalak</li>
+        <li>böngésző adatok</li>
+        <li>látogatási statisztikák</li>
       </ul>
 
-      <h2>2. Analitikai eszközök</h2>
-
-      <p>
-        A weboldal a Google Analytics szolgáltatást használja a látogatottsági
-        adatok elemzésére. Ez segít megérteni, hogyan használják a látogatók az
-        oldalt.
-      </p>
-
-      <p>A Google Analytics sütiket használhat az adatok gyűjtéséhez.</p>
-
-      <h2>3. Cookie-k (sütik)</h2>
-
-      <p>
-        A weboldal sütiket használ a felhasználói élmény javítása és
-        statisztikai adatok gyűjtése érdekében.
-      </p>
-
-      <p>
-        A felhasználó a böngésző beállításaiban bármikor törölheti vagy
-        letilthatja a sütiket.
-      </p>
-
-      <h2>4. Harmadik fél szolgáltatások</h2>
-
-      <p>A weboldal harmadik fél szolgáltatásokat használhat, például:</p>
-
-      <ul>
-        <li>Google Analytics</li>
-        <li>Google AdSense (jövőben)</li>
-      </ul>
-
-      <p>Ezek a szolgáltatások saját adatvédelmi irányelvekkel rendelkeznek.</p>
-
-      <h2>5. Adatkezelés célja</h2>
+      <h2>Adatkezelés célja</h2>
 
       <ul>
         <li>weboldal működésének biztosítása</li>
         <li>statisztikai elemzés</li>
-        <li>felhasználói élmény javítása</li>
+        <li>hirdetések megjelenítése</li>
       </ul>
 
-      <h2>6. Adatmegőrzés</h2>
+      <h2>Jogalap</h2>
 
       <p>
-        Az analitikai adatokat a Google szolgáltatásai tárolják a saját
-        szabályzatuk szerint.
+        Az adatkezelés jogalapja a felhasználó hozzájárulása (cookie elfogadás).
       </p>
 
-      <h2>7. Felhasználói jogok</h2>
+      <h2>Harmadik fél szolgáltatások</h2>
 
-      <p>
-        A felhasználók jogosultak tájékoztatást kérni az adatkezelésről,
-        valamint kérhetik adataik törlését vagy korlátozását.
-      </p>
+      <ul>
+        <li>Google Analytics</li>
+        <li>Google AdSense</li>
+      </ul>
 
-      <h2>8. Kapcsolat</h2>
+      <h2>Felhasználói jogok</h2>
 
-      <p>
-        Amennyiben kérdése van az adatvédelemmel kapcsolatban, kérjük, vegye fel
-        a kapcsolatot az oldal üzemeltetőjével.
-      </p>
+      <ul>
+        <li>hozzáférés kérése</li>
+        <li>adatok törlése</li>
+        <li>adatkezelés korlátozása</li>
+      </ul>
 
-      <h2>9. Módosítások</h2>
+      <h2>Kapcsolat</h2>
 
-      <p>Az adatvédelmi tájékoztató időről időre frissítésre kerülhet.</p>
+      <p>kalkulatorbazis@gmail.com</p>
     </main>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
 
-    <footer>
-      <p>© 2026 KalkulátorHub</p>
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="js/utils.js" defer></script>
+  <script src="js/cookie.js" defer></script>
 </html>

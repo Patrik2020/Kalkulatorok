@@ -1,20 +1,6 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -26,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/lakashitel-onero.css" />
 
     <!-- Canonical -->
     <link
@@ -36,9 +23,8 @@
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
-
-      <nav>
+      <a href="../index.html" class="logo">🧮 Kalkulátor Bázis</a>
+      <nav id="menu">
         <a href="../index.html">Főoldal</a>
         <a href="../penzugyi.html">Pénzügyi</a>
         <a href="../epitoipari.html">Építőipari</a>
@@ -67,8 +53,6 @@
           <label>Önerő (%)</label>
           <input type="number" id="downPaymentPercent" value="20" />
         </div>
-
-        <button onclick="calculateDownPayment()">Számol</button>
 
         <div class="result" id="result">
           <p>Eredmény: –</p>
@@ -125,23 +109,6 @@
           terhet jelenthet.
         </p>
 
-        <h2>Kapcsolódó kalkulátorok</h2>
-        <p>
-          Számold ki a havi törlesztőrészletet a
-          <a href="hitel-torleszto-kalkulator.html"
-            >hitel törlesztő kalkulátorral</a
-          >.
-        </p>
-        <p>
-          Nézd meg mennyi hitelt kaphatsz a
-          <a href="hitelkepesseg-kalkulator.html">hitelképesség kalkulátorral</a
-          >.
-        </p>
-        <p>
-          Számold ki nettó fizetésed a
-          <a href="netto-brutto-kalkulator.html">nettó-bruttó kalkulátorral</a>.
-        </p>
-
         <h2>Fontos tudnivaló</h2>
         <p>
           <strong
@@ -167,9 +134,30 @@
         </p>
       </section>
     </main>
-    <footer>
-      <p>© 2026 KalkulátorBázis</p>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
+
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/cookie.js" defer></script>
+  <script src="../js/penzugyi/lakashitel-onero.js" defer></script>
 </html>

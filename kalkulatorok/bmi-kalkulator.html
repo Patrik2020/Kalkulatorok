@@ -1,34 +1,35 @@
 <!doctype html>
 <html lang="hu">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-4JBY0GDC4C");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMI kalkulátor</title>
-    <meta name="description" content="Számold ki a testtömeg indexed (BMI)." />
+    <title>BMI kalkulátor 2026 – testtömeg index számítás online</title>
+
+    <meta
+      name="description"
+      content="BMI kalkulátor online: számold ki a testtömeg indexed gyorsan és egyszerűen. Tudd meg, hogy normál, túlsúlyos vagy-e."
+    />
+
+    <link
+      rel="canonical"
+      href="https://kalkulatorbazis.hu/kalkulatorok/bmi-kalkulator.html"
+    />
+
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/bmi.css" />
   </head>
 
   <body>
     <header>
-      <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+      <a href="../index.html" class="logo">🧮 Kalkulátor Bázis</a>
 
-      <nav>
-        <button onclick="goBack()" class="back-btn">← Vissza</button>
+      <nav id="menu">
         <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
       </nav>
     </header>
 
@@ -51,8 +52,6 @@
             </div>
           </div>
 
-          <button onclick="calculateBMI()">Számol</button>
-
           <div class="result-box">
             <p>Eredmény:</p>
             <p id="result-value">–</p>
@@ -60,49 +59,73 @@
         </section>
       </div>
       <section class="article">
-        <h2>Mi az a BMI (testtömeg index)?</h2>
+        <h2>BMI kalkulátor – testtömeg index számítás</h2>
 
         <p>
-          A BMI (Body Mass Index) egy egyszerű mutató, amely segít meghatározni,
-          hogy a testsúlyod egészséges tartományban van-e a magasságodhoz
-          képest.
+          A <strong>BMI kalkulátor</strong> segítségével gyorsan megtudhatod,
+          hogy testsúlyod egészséges tartományban van-e a magasságodhoz képest.
+        </p>
+
+        <h2>Mi az a BMI?</h2>
+
+        <p>
+          A BMI (Body Mass Index) egy olyan mutató, amely megmutatja a testsúly
+          és magasság arányát.
         </p>
 
         <h2>Hogyan számoljuk?</h2>
 
-        <p>A BMI kiszámítása a következő képlettel történik:</p>
+        <p><strong>BMI = testsúly / (magasság²)</strong></p>
 
-        <p><strong>BMI = testsúly (kg) / magasság² (m²)</strong></p>
-
-        <p>Például: 80 kg testsúly és 1,8 m magasság esetén:</p>
-
-        <p><strong>80 / (1.8 × 1.8) = 24.7</strong></p>
-
-        ---
-
-        <h2>BMI értékek és jelentésük</h2>
+        <h2>BMI kategóriák</h2>
 
         <ul>
-          <li><strong>18.5 alatt:</strong> soványság</li>
-          <li><strong>18.5 – 24.9:</strong> normál testsúly</li>
-          <li><strong>25 – 29.9:</strong> túlsúly</li>
-          <li><strong>30 felett:</strong> elhízás</li>
+          <li>18.5 alatt: soványság</li>
+          <li>18.5–24.9: normál</li>
+          <li>25–29.9: túlsúly</li>
+          <li>30 felett: elhízás</li>
         </ul>
 
-        ---
+        <h2>Mire jó a BMI kalkulátor?</h2>
 
-        <h2>Fontos megjegyzés</h2>
+        <ul>
+          <li>egészségi állapot becslése</li>
+          <li>fogyás vagy hízás tervezése</li>
+          <li>fitnesz célok meghatározása</li>
+        </ul>
+
+        <h2>Fontos tudni</h2>
 
         <p>
-          A BMI nem veszi figyelembe az izomtömeget vagy a testösszetételt,
-          ezért sportolóknál torzíthat.
+          A BMI nem veszi figyelembe az izomtömeget, ezért sportolóknál
+          pontatlan lehet.
         </p>
       </section>
     </main>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
 
-    <footer>
-      <p>© 2026 KalkulátorBázis</p>
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
+      </div>
     </footer>
   </body>
-  <script src="/js/kalkulator.js" defer></script>
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/cookie.js" defer></script>
+  <script src="../js/egeszseg/bmi.js" defer></script>
 </html>

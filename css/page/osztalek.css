@@ -1,0 +1,177 @@
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+/* ===== TITLE ===== */
+.container h1 {
+  margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+.container p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* ===== BOX (ugyanaz mint card) ===== */
+.calculator-box {
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* ===== LABEL ===== */
+.calculator-box label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* ===== INPUT ===== */
+.calculator-box input {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto 15px;
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* ===== INPUT FOCUS ===== */
+.calculator-box input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+  transform: scale(1.02);
+}
+
+/* ===== KIEMELT INPUT ===== */
+#amount {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* ===== RESULT (ugyanaz mint többi kalkulátor) ===== */
+.result {
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  border: 1px solid #bbf7d0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #166534;
+}
+
+/* ===== LINK ===== */
+.calculator-box a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.calculator-box a:hover {
+  text-decoration: underline;
+}
+
+/* ===== DESCRIPTION ===== */
+.description {
+  margin: 40px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* ===== HEADINGS ===== */
+.description h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+/* ===== RELATED CALCULATORS BUTTON STYLE ===== */
+.calculator-box a,
+.related-calculators a,
+.description a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4caf50, #43a047);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* hover */
+.calculator-box a:hover,
+.related-calculators a:hover,
+.description a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.3);
+}
+/* ===== HEADER (OSZTALÉK OLDALRA) ===== */
+header {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== LOGO LINK ===== */
+header a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* ===== LOGO IKON ===== */
+header a img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+/* ===== SZÖVEG ===== */
+header a span {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.3px;
+  transition: 0.2s;
+}
+
+/* ===== HOVER ===== */
+header a:hover span {
+  color: #4caf50;
+}
+
+/* ===== FINOM SHADOW ===== */
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .calculator-box {
+    padding: 20px;
+  }
+
+  .result {
+    font-size: 24px;
+  }
+}

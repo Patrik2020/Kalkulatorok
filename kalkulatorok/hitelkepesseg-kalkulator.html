@@ -1,111 +1,135 @@
 <!doctype html>
 <html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mennyi hitelt kaphatok? – Hitelképesség kalkulátor 2026</title>
+    <meta
+      name="description"
+      content="Számold ki mennyi hitelt kaphatsz Magyarországon. Hitelképesség kalkulátor jövedelem alapján, egyszerűen."
+    />
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4JBY0GDC4C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/page/hitelkepesseg.css" />
+    <link
+      rel="canonical"
+      href="https://kalkulatorbazis.hu/kalkulatorok/hitelkepesseg-kalkulator.html"
+    />
+  </head>
 
-    gtag("config", "G-4JBY0GDC4C");
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mennyi hitelt kaphatok? – Hitelképesség kalkulátor 2026</title>
-  <meta name="description"
-    content="Számold ki mennyi hitelt kaphatsz Magyarországon. Hitelképesség kalkulátor jövedelem alapján, egyszerűen." />
+  <body>
+    <header>
+      <a href="../index.html" class="logo">🧮 Kalkulátor Bázis</a>
+      <nav id="menu">
+        <a href="../index.html">Főoldal</a>
+        <a href="../penzugyi.html">Pénzügyi</a>
+        <a href="../epitoipari.html">Építőipari</a>
+        <a href="../egeszseg.html">Egészség</a>
+        <a href="../mindennapi.html">Mindennapi</a>
+        <a href="../auto.html">Autó</a>
+      </nav>
+    </header>
 
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="canonical" href="https://kalkulatorbazis.hu/kalkulatorok/hitelkepesseg-kalkulator.html" />
-</head>
+    <main>
+      <section class="calculator">
+        <h1>Mennyi hitelt kaphatok? – Hitelképesség kalkulátor</h1>
+        <p>Számold ki, mekkora hitelt vehetsz fel a jövedelmed alapján.</p>
 
-<body>
-  <header>
-    <a href="../index.html" class="logo">🧮 KalkulátorBázis</a>
+        <div class="input-group">
+          <label>Nettó jövedelem (Ft/hó)</label>
+          <input type="text" id="income" inputmode="numeric" />
+        </div>
 
-    <nav>
-      <a href="../index.html">Főoldal</a>
-      <a href="../penzugyi.html">Pénzügyi</a>
-      <a href="../epitoipari.html">Építőipari</a>
-      <a href="../egeszseg.html">Egészség</a>
-      <a href="../mindennapi.html">Mindennapi</a>
-      <a href="../auto.html">Autó</a>
-    </nav>
-  </header>
+        <div class="input-group">
+          <label>Meglévő hitelek (Ft/hó)</label>
+          <input type="number" id="existingLoans" value="0" />
+        </div>
 
-  <main>
-    <section class="calculator">
-      <h1>Mennyi hitelt kaphatok? – Hitelképesség kalkulátor</h1>
-      <p>Számold ki, mekkora hitelt vehetsz fel a jövedelmed alapján.</p>
+        <div class="input-group">
+          <label>Kamat (% / év)</label>
+          <input type="number" id="interestRate" value="8" />
+        </div>
 
-      <div class="input-group">
-        <label>Nettó jövedelem (Ft/hó)</label>
-        <input type="number" id="income" />
+        <div class="input-group">
+          <label>Futamidő (év)</label>
+          <input type="number" id="years" value="20" />
+        </div>
+
+        <div class="result" id="result">
+  <p>Eredmény: –</p>
+</div>
+
+<section class="related">
+  <p><strong>Tervezz tovább 👇</strong></p>
+
+  <div class="calc-links">
+    <a href="hitel-torleszto-kalkulator.html">🏦 Hitel törlesztő kalkulátor</a>
+    <a href="lakas-hitel-onero-kalkulator.html">🏠 Lakáshitel önerő kalkulátor</a>
+    <a href="netto-brutto-kalkulator.html">💰 Nettó–bruttó kalkulátor</a>
+  </div>
+</section>
+        </div>
+        <h2>Hogyan számolják a hitelképességet?</h2>
+        <p>
+          Magyarországon a hitelképesség meghatározása a jövedelemarányos
+          törlesztési mutató (JTM) alapján történik. Ez szabályozza, hogy a havi
+          jövedelmed mekkora részét fordíthatod hiteltörlesztésre.
+        </p>
+
+        <h2>Mennyi hitelt kaphatok a fizetésem alapján?</h2>
+        <ul>
+          <li>300 000 Ft alatt: kb. 30% terhelhetőség</li>
+          <li>300 000 - 600 000 Ft: kb. 40%</li>
+          <li>600 000 Ft felett: akár 50%</li>
+        </ul>
+
+        <h2>Példa számítás</h2>
+        <p>
+          Ha a nettó jövedelmed 400 000 Ft, akkor kb. 160 000 Ft havi törlesztőt
+          vállalhatsz.
+        </p>
+
+        <h2>Mi befolyásolja a hitelképességet?</h2>
+        <ul>
+          <li>Jövedelem nagysága</li>
+          <li>Meglévő hitelek</li>
+          <li>Futamidő</li>
+          <li>Kamat</li>
+        </ul>
+
+        <h2>Fontos tudnivaló</h2>
+        <p>
+          <strong
+            >Ez a kalkulátor kizárólag Magyarországon érvényes szabályok alapján
+            számol.</strong
+          >
+        </p>
+      </section>
+    </main>
+    <div id="cookie-banner" class="cookie-banner">
+      <p>
+        Ez a weboldal sütiket használ (analitika és hirdetés).
+        <a href="adatvedelem.html">Részletek</a>
+      </p>
+
+      <button id="accept-cookies">Elfogadom</button>
+      <button id="decline-cookies">Elutasítom</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <p>© 2026 KalkulátorBázis</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="adatvedelem.html">🔒 Adatvédelem</a>
+          <a href="felhasznalasi-feltetelek.html">📜 Feltételek</a>
+          <a href="cookie.html">🍪 Sütik</a>
+        </div>
       </div>
-
-      <div class="input-group">
-        <label>Meglévő hitelek (Ft/hó)</label>
-        <input type="number" id="existingLoans" value="0" />
-      </div>
-
-      <div class="input-group">
-        <label>Kamat (% / év)</label>
-        <input type="number" id="interestRate" value="8" />
-      </div>
-
-      <div class="input-group">
-        <label>Futamidő (év)</label>
-        <input type="number" id="years" value="20" />
-      </div>
-
-      <button onclick="calculateLoanCapacity()">Számol</button>
-
-      <div class="result" id="result">
-        <p>Eredmény: –</p>
-      </div>
-      <h2>Hogyan számolják a hitelképességet?</h2>
-    <p>Magyarországon a hitelképesség meghatározása a jövedelemarányos törlesztési mutató (JTM) alapján történik. Ez
-      szabályozza, hogy a havi jövedelmed mekkora részét fordíthatod hiteltörlesztésre.</p>
-
-    <h2>Mennyi hitelt kaphatok a fizetésem alapján?</h2>
-    <ul>
-      <li>300 000 Ft alatt: kb. 30% terhelhetőség</li>
-      <li>300 000 – 600 000 Ft: kb. 40%</li>
-      <li>600 000 Ft felett: akár 50%</li>
-    </ul>
-
-    <h2>Példa számítás</h2>
-    <p>Ha a nettó jövedelmed 400 000 Ft, akkor kb. 160 000 Ft havi törlesztőt vállalhatsz.</p>
-
-    <h2>Mi befolyásolja a hitelképességet?</h2>
-    <ul>
-      <li>Jövedelem nagysága</li>
-      <li>Meglévő hitelek</li>
-      <li>Futamidő</li>
-      <li>Kamat</li>
-    </ul>
-
-    <h2>Fontos tudnivaló</h2>
-    <p><strong>Ez a kalkulátor kizárólag Magyarországon érvényes szabályok alapján számol.</strong></p>
-    </section>
-    <p>
-      Nézd meg a
-      <a href="hitel-torleszto-kalkulator.html">hitel törlesztő kalkulátort</a>
-      is.
-    </p>
-    <p><strong>Számold ki mennyi hitelt kaphatsz 👇</strong></p>
-  <p>Számold ki a havi részletet a <a href="hitel-torleszto-kalkulator.html">hitel törlesztő kalkulátorral</a>.</p>
-  <p>Nézd meg mennyi önerő kell a <a href="lakas-hitel-onero-kalkulator.html">lakáshitel önerő kalkulátorral</a>.</p>
-  <p>Számold ki a fizetésed a <a href="netto-brutto-kalkulator.html">nettó-bruttó kalkulátorral</a>.</p>
-    </section>
-  </main>
-  <footer>
-      <p>© 2026 KalkulátorBázis</p>
     </footer>
-</body>
-<script src="/js/kalkulator.js" defer></script>
+  </body>
+  <script src="../js/utils.js"></script>
+  <script src="../js/cookie.js" defer></script>
+  <script src="../js/penzugyi/hitelkepesseg.js" defer></script>
 </html>
