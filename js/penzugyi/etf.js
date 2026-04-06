@@ -95,7 +95,7 @@
 
         <p>Összes befizetés: ${format(invested)} Ft</p>
         <p>Nyereség: ${format(profit)} Ft</p>
-        <p>Havi passzív jövedelem: ${format(monthlyPassive)} Ft</p>
+        <p>Becsült havi hozam az utolsó évben: ${format(monthlyPassive)} Ft</p>
       </div>
     `;
 
